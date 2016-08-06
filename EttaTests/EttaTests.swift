@@ -32,5 +32,18 @@ class EttaTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-    
+
+    func testSearchProtocol() {
+        let sq = SearchQuery.init(term: "tower")
+        XCTAssert(sq.term == "tower")
+        let ex1 = expectation(description: "test")
+        sq.search(sq.term) {
+            ex1.fulfill()
+        }
+
+        self.waitForExpectations(timeout: 5) { (error) in
+            XCTAssertNil(error, "something went wrong")
+            XCTAssertNotNil(sq.result)
+        }
+    }
 }

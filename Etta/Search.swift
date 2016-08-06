@@ -9,7 +9,9 @@
 import Foundation
 
 protocol SearchProtocol {
-    func search(_ text: String)
+    var term: String { get }
+    var result: String? { get set }
+    func search(_ text: String, completionHandler: ()-> Void) -> String?
 }
 
 extension SearchProtocol {
@@ -17,12 +19,13 @@ extension SearchProtocol {
     /// Performs a search at EtymOnline
     ///
     /// - parameter text: the text to search for
-    func search(_ text: String) {
+    internal func search(_ text: String, completionHandler: () -> Void) -> String? {
 
         /// Prepare the session and request objects
         let session = URLSession(configuration: URLSessionConfiguration.default)
         let request = URLRequest(url: URL(string: Config.eoURL)!)
-
+        var searchResult: String?
+        
         /// Define the task to perform - passed in as a closure
         let task : URLSessionDataTask = session.dataTask(with: request) { (data, response, error) -> Void in
 
@@ -37,9 +40,16 @@ extension SearchProtocol {
             }
 
             /// Define the response object
-            let response =  String(data: data, encoding: String.Encoding.utf8)
-            print(response)
+            let response = String(data: data, encoding: String.Encoding.utf8)
+            searchResult = response!
+            completionHandler()
         }
         task.resume()
+        return searchResult
     }
+}
+
+struct SearchQuery: SearchProtocol {
+    let term: String
+    var result: String? = nil
 }

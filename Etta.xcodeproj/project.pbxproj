@@ -13,10 +13,10 @@
 		B55274461D56726C00932E30 /* Etta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B55274441D56726C00932E30 /* Etta.xcdatamodeld */; };
 		B55274481D56726C00932E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55274471D56726C00932E30 /* Assets.xcassets */; };
 		B552744B1D56726C00932E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55274491D56726C00932E30 /* LaunchScreen.storyboard */; };
-		B55274561D56726C00932E30 /* EttaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55274551D56726C00932E30 /* EttaTests.swift */; };
 		B55274611D56726C00932E30 /* EttaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55274601D56726C00932E30 /* EttaUITests.swift */; };
 		B552746F1D56762E00932E30 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552746E1D56762E00932E30 /* Config.swift */; };
 		B55274711D567D8E00932E30 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55274701D567D8E00932E30 /* Search.swift */; };
+		B5D15F4E1D56992C00A0FA03 /* EttaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55274551D56726C00932E30 /* EttaTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -283,7 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B55274561D56726C00932E30 /* EttaTests.swift in Sources */,
+				B5D15F4E1D56992C00A0FA03 /* EttaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +522,7 @@
 				B55274671D56726C00932E30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B55274681D56726C00932E30 /* Build configuration list for PBXNativeTarget "EttaTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +531,7 @@
 				B552746A1D56726C00932E30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B552746B1D56726C00932E30 /* Build configuration list for PBXNativeTarget "EttaUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +540,7 @@
 				B552746D1D56726C00932E30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
