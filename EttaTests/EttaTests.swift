@@ -34,16 +34,9 @@ class EttaTests: XCTestCase {
     }
 
     func testSearchProtocol() {
-        let sq = SearchQuery.init(term: "tower")
+        var sq = SearchQuery(term: "tower", result: "nil")
         XCTAssert(sq.term == "tower")
-        let ex1 = expectation(description: "test")
-        sq.search(sq.term) {
-            ex1.fulfill()
-        }
-
-        self.waitForExpectations(timeout: 5) { (error) in
-            XCTAssertNil(error, "something went wrong")
-            XCTAssertNotNil(sq.result)
-        }
+        sq.result = sq.search(sq.term)
+        wait
     }
 }

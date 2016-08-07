@@ -53,6 +53,7 @@
 		B55274621D56726C00932E30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B552746E1D56762E00932E30 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		B55274701D567D8E00932E30 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		B59309AD1D5784920042D0B1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 		B55274311D56726C00932E30 = {
 			isa = PBXGroup;
 			children = (
+				B59309AD1D5784920042D0B1 /* README.md */,
 				B552743C1D56726C00932E30 /* Etta */,
 				B55274541D56726C00932E30 /* EttaTests */,
 				B552745F1D56726C00932E30 /* EttaUITests */,
