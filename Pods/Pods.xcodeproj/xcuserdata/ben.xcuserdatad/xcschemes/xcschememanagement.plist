@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>HTMLReader.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>Pods-Etta.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-EttaTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Pods-EttaUITests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>310B90698336591399A92CFF6F4408B1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>35AB4E645558A256E1C06F38C71F4836</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A9222FA014BCAF11B07A9517FC5F5D13</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DC96EBB088160281A73151BD4B66B1AF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
