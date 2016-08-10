@@ -10,4 +10,9 @@
 struct SearchQuery: SearchProtocol {
     let term: String
     var result: String? = nil
+
+    init(term: String) {
+        self.term = term
+        self.result = nil
+    }
 }

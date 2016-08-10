@@ -10,19 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var searchBox: UITextView!
+    @IBOutlet weak var resultTextView: UITextView!
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        var sq = SearchQuery(term: "benjamin", result: nil)
 
-        sq.search { (response) in
-            sq.result = response
-            print(response)
-            let p = Parser(rawContent: response!)
-            print(p.parsedContent())
-
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,5 +27,19 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func searchChanged(_ sender: UITextField) {
+        guard sender.text != nil else {
+            return
+        }
+        let sq = SearchQuery(term: sender.text!)
+        sq.search { (response) in
+            let p = Parser(rawContent: response!)
+            let c = p.parsedContent()
+            DispatchQueue.main.async {
+                self.resultTextView.text = c
+            }
+        }
+
+    }
 }
 
