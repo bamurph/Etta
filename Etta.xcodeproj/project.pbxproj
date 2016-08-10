@@ -18,8 +18,10 @@
 		B552744B1D56726C00932E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55274491D56726C00932E30 /* LaunchScreen.storyboard */; };
 		B55274611D56726C00932E30 /* EttaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55274601D56726C00932E30 /* EttaUITests.swift */; };
 		B552746F1D56762E00932E30 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552746E1D56762E00932E30 /* Config.swift */; };
-		B55274711D567D8E00932E30 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55274701D567D8E00932E30 /* Search.swift */; };
-		B566EBA01D5B9AF6007ECCA1 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566EB9F1D5B9AF6007ECCA1 /* Parse.swift */; };
+		B55274711D567D8E00932E30 /* SearchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55274701D567D8E00932E30 /* SearchProtocol.swift */; };
+		B566EBA01D5B9AF6007ECCA1 /* ParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566EB9F1D5B9AF6007ECCA1 /* ParserProtocol.swift */; };
+		B566EBA21D5BA1A1007ECCA1 /* SearchQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566EBA11D5BA1A1007ECCA1 /* SearchQuery.swift */; };
+		B566EBA41D5BA1C3007ECCA1 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566EBA31D5BA1C3007ECCA1 /* Parser.swift */; };
 		B5D15F4E1D56992C00A0FA03 /* EttaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55274551D56726C00932E30 /* EttaTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,9 +63,11 @@
 		B552745C1D56726C00932E30 /* EttaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EttaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B55274601D56726C00932E30 /* EttaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EttaUITests.swift; sourceTree = "<group>"; };
 		B55274621D56726C00932E30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B552746E1D56762E00932E30 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		B55274701D567D8E00932E30 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
-		B566EB9F1D5B9AF6007ECCA1 /* Parse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parse.swift; sourceTree = "<group>"; };
+		B552746E1D56762E00932E30 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Config.swift; path = Etta/Config.swift; sourceTree = "<group>"; };
+		B55274701D567D8E00932E30 /* SearchProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProtocol.swift; sourceTree = "<group>"; };
+		B566EB9F1D5B9AF6007ECCA1 /* ParserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserProtocol.swift; sourceTree = "<group>"; };
+		B566EBA11D5BA1A1007ECCA1 /* SearchQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchQuery.swift; sourceTree = "<group>"; };
+		B566EBA31D5BA1C3007ECCA1 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		B59309AD1D5784920042D0B1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B5FAEEBB1D5A6DF30025C5E8 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		C62DE18C01052B1165E8B70D /* Pods-Etta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Etta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Etta/Pods-Etta.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 		B55274311D56726C00932E30 = {
 			isa = PBXGroup;
 			children = (
+				B552746E1D56762E00932E30 /* Config.swift */,
 				B5FAEEBB1D5A6DF30025C5E8 /* Package.swift */,
 				B59309AD1D5784920042D0B1 /* README.md */,
 				B552743C1D56726C00932E30 /* Etta */,
@@ -149,9 +154,8 @@
 		B552743C1D56726C00932E30 /* Etta */ = {
 			isa = PBXGroup;
 			children = (
-				B552746E1D56762E00932E30 /* Config.swift */,
-				B55274701D567D8E00932E30 /* Search.swift */,
-				B566EB9F1D5B9AF6007ECCA1 /* Parse.swift */,
+				B566EBA51D5BA1DE007ECCA1 /* Protocols */,
+				B566EBA61D5BA1E6007ECCA1 /* Structs */,
 				B552743D1D56726C00932E30 /* AppDelegate.swift */,
 				B552743F1D56726C00932E30 /* ViewController.swift */,
 				B55274411D56726C00932E30 /* Main.storyboard */,
@@ -179,6 +183,24 @@
 				B55274621D56726C00932E30 /* Info.plist */,
 			);
 			path = EttaUITests;
+			sourceTree = "<group>";
+		};
+		B566EBA51D5BA1DE007ECCA1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				B55274701D567D8E00932E30 /* SearchProtocol.swift */,
+				B566EB9F1D5B9AF6007ECCA1 /* ParserProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		B566EBA61D5BA1E6007ECCA1 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				B566EBA11D5BA1A1007ECCA1 /* SearchQuery.swift */,
+				B566EBA31D5BA1C3007ECCA1 /* Parser.swift */,
+			);
+			name = Structs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -450,10 +472,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B55274401D56726C00932E30 /* ViewController.swift in Sources */,
-				B566EBA01D5B9AF6007ECCA1 /* Parse.swift in Sources */,
+				B566EBA01D5B9AF6007ECCA1 /* ParserProtocol.swift in Sources */,
 				B552746F1D56762E00932E30 /* Config.swift in Sources */,
-				B55274711D567D8E00932E30 /* Search.swift in Sources */,
+				B55274711D567D8E00932E30 /* SearchProtocol.swift in Sources */,
+				B566EBA41D5BA1C3007ECCA1 /* Parser.swift in Sources */,
 				B55274461D56726C00932E30 /* Etta.xcdatamodeld in Sources */,
+				B566EBA21D5BA1A1007ECCA1 /* SearchQuery.swift in Sources */,
 				B552743E1D56726C00932E30 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

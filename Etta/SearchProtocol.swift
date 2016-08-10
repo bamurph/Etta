@@ -50,8 +50,4 @@ extension SearchProtocol {
 }
 
 
-/// A basic search query - init with a search term, the result is an optional
-struct SearchQuery: SearchProtocol {
-    let term: String
-    var result: String? = nil
-}
+

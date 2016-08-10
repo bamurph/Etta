@@ -15,9 +15,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
 
         var sq = SearchQuery(term: "benjamin", result: nil)
+
         sq.search { (response) in
             sq.result = response
             print(response)
+            let p = Parser(rawContent: response!)
+            print(p.parsedContent())
+
         }
     }
 
