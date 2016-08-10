@@ -37,6 +37,7 @@ class EttaTests: XCTestCase {
         var sq = SearchQuery(term: "tower", result: "nil")
         XCTAssert(sq.term == "tower")
         sq.result = sq.search(sq.term)
+        print(sq.result)
 
     }
 }

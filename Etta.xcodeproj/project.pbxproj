@@ -1,1584 +1,750 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>015CC8E1E00502E863460FF6</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-EttaTests/Pods-EttaTests-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>0F07F5613E5A5928EEC6CAB2</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Etta/Pods-Etta-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>1DBDCBD913C9E772BB94A70A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-EttaTests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-EttaTests/Pods-EttaTests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>20C19783FF3DA80F8BCB0335</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-EttaUITests/Pods-EttaUITests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>3967641622C8DC941CC45FDE</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_EttaUITests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>46A27B7282EACD2CE25063FE</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_EttaTests.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>49AB807D39B3E12A35DAF183</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B2F473F2C00D197CFF459483</string>
-				<string>46A27B7282EACD2CE25063FE</string>
-				<string>3967641622C8DC941CC45FDE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>768A403B2A939CA529E4D53C</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>C62DE18C01052B1165E8B70D</string>
-				<string>C685D3FEF6137676754DAD35</string>
-				<string>1DBDCBD913C9E772BB94A70A</string>
-				<string>A1DC5A5C11816CC63F2FDF2B</string>
-				<string>C7BACA7433420F20789471AE</string>
-				<string>A506C4E50F8009EF5D7182CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9109BD27FB5D95C47AD4F8FE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>46A27B7282EACD2CE25063FE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>9262503F3DD1E3415EFE6806</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3967641622C8DC941CC45FDE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A1DC5A5C11816CC63F2FDF2B</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-EttaTests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-EttaTests/Pods-EttaTests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A506C4E50F8009EF5D7182CA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-EttaUITests.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-EttaUITests/Pods-EttaUITests.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A893C58F7724214CFEE6D496</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B2F473F2C00D197CFF459483</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>AF09B6EA7F05E1A823EA81DD</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>B2F473F2C00D197CFF459483</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_Etta.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>B55274311D56726C00932E30</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B5FAEEBD1D5A701B0025C5E8</string>
-				<string>B5FAEEBB1D5A6DF30025C5E8</string>
-				<string>B59309AD1D5784920042D0B1</string>
-				<string>B552743C1D56726C00932E30</string>
-				<string>B55274541D56726C00932E30</string>
-				<string>B552745F1D56726C00932E30</string>
-				<string>B552743B1D56726C00932E30</string>
-				<string>768A403B2A939CA529E4D53C</string>
-				<string>49AB807D39B3E12A35DAF183</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B55274321D56726C00932E30</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastSwiftUpdateCheck</key>
-				<string>0800</string>
-				<key>LastUpgradeCheck</key>
-				<string>0800</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Constellation Software</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>B55274391D56726C00932E30</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.0</string>
-						<key>DevelopmentTeam</key>
-						<string>97JRRX372K</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-					</dict>
-					<key>B55274501D56726C00932E30</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.0</string>
-						<key>DevelopmentTeam</key>
-						<string>97JRRX372K</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-						<key>TestTargetID</key>
-						<string>B55274391D56726C00932E30</string>
-					</dict>
-					<key>B552745B1D56726C00932E30</key>
-					<dict>
-						<key>CreatedOnToolsVersion</key>
-						<string>8.0</string>
-						<key>DevelopmentTeam</key>
-						<string>97JRRX372K</string>
-						<key>ProvisioningStyle</key>
-						<string>Automatic</string>
-						<key>TestTargetID</key>
-						<string>B55274391D56726C00932E30</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>B55274351D56726C00932E30</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>B55274311D56726C00932E30</string>
-			<key>productRefGroup</key>
-			<string>B552743B1D56726C00932E30</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>B55274391D56726C00932E30</string>
-				<string>B55274501D56726C00932E30</string>
-				<string>B552745B1D56726C00932E30</string>
-			</array>
-		</dict>
-		<key>B55274351D56726C00932E30</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B55274631D56726C00932E30</string>
-				<string>B55274641D56726C00932E30</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>B55274361D56726C00932E30</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B55274401D56726C00932E30</string>
-				<string>B552746F1D56762E00932E30</string>
-				<string>B55274711D567D8E00932E30</string>
-				<string>B55274461D56726C00932E30</string>
-				<string>B552743E1D56726C00932E30</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B55274371D56726C00932E30</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>A893C58F7724214CFEE6D496</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B55274381D56726C00932E30</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B552744B1D56726C00932E30</string>
-				<string>B55274481D56726C00932E30</string>
-				<string>B55274431D56726C00932E30</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B55274391D56726C00932E30</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>B55274651D56726C00932E30</string>
-			<key>buildPhases</key>
-			<array>
-				<string>D16CD16F7ADA0C312D5D3EF1</string>
-				<string>B55274361D56726C00932E30</string>
-				<string>B55274371D56726C00932E30</string>
-				<string>B55274381D56726C00932E30</string>
-				<string>B5FAEEBA1D5A6DB60025C5E8</string>
-				<string>0F07F5613E5A5928EEC6CAB2</string>
-				<string>E8227E21EAAE4B667B00DC2D</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Etta</string>
-			<key>productName</key>
-			<string>Etta</string>
-			<key>productReference</key>
-			<string>B552743A1D56726C00932E30</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>B552743A1D56726C00932E30</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Etta.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>B552743B1D56726C00932E30</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B552743A1D56726C00932E30</string>
-				<string>B55274511D56726C00932E30</string>
-				<string>B552745C1D56726C00932E30</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B552743C1D56726C00932E30</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B552746E1D56762E00932E30</string>
-				<string>B55274701D567D8E00932E30</string>
-				<string>B552743D1D56726C00932E30</string>
-				<string>B552743F1D56726C00932E30</string>
-				<string>B55274411D56726C00932E30</string>
-				<string>B55274471D56726C00932E30</string>
-				<string>B55274491D56726C00932E30</string>
-				<string>B552744C1D56726C00932E30</string>
-				<string>B55274441D56726C00932E30</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Etta</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B552743D1D56726C00932E30</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>AppDelegate.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B552743E1D56726C00932E30</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B552743D1D56726C00932E30</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B552743F1D56726C00932E30</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>ViewController.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B55274401D56726C00932E30</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B552743F1D56726C00932E30</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B55274411D56726C00932E30</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B55274421D56726C00932E30</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B55274421D56726C00932E30</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B55274431D56726C00932E30</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B55274411D56726C00932E30</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B55274441D56726C00932E30</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B55274451D56726C00932E30</string>
-			</array>
-			<key>currentVersion</key>
-			<string>B55274451D56726C00932E30</string>
-			<key>isa</key>
-			<string>XCVersionGroup</string>
-			<key>path</key>
-			<string>Etta.xcdatamodeld</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-			<key>versionGroupType</key>
-			<string>wrapper.xcdatamodel</string>
-		</dict>
-		<key>B55274451D56726C00932E30</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.xcdatamodel</string>
-			<key>path</key>
-			<string>Etta.xcdatamodel</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B55274461D56726C00932E30</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B55274441D56726C00932E30</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B55274471D56726C00932E30</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Assets.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B55274481D56726C00932E30</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B55274471D56726C00932E30</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B55274491D56726C00932E30</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B552744A1D56726C00932E30</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B552744A1D56726C00932E30</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/LaunchScreen.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B552744B1D56726C00932E30</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B55274491D56726C00932E30</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B552744C1D56726C00932E30</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B552744D1D56726C00932E30</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B5D15F4E1D56992C00A0FA03</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B552744E1D56726C00932E30</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>9109BD27FB5D95C47AD4F8FE</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B552744F1D56726C00932E30</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B55274501D56726C00932E30</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>B55274681D56726C00932E30</string>
-			<key>buildPhases</key>
-			<array>
-				<string>AF09B6EA7F05E1A823EA81DD</string>
-				<string>B552744D1D56726C00932E30</string>
-				<string>B552744E1D56726C00932E30</string>
-				<string>B552744F1D56726C00932E30</string>
-				<string>015CC8E1E00502E863460FF6</string>
-				<string>D03302281F66BA76EE844516</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>B55274531D56726C00932E30</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>EttaTests</string>
-			<key>productName</key>
-			<string>EttaTests</string>
-			<key>productReference</key>
-			<string>B55274511D56726C00932E30</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>B55274511D56726C00932E30</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>EttaTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>B55274521D56726C00932E30</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>B55274321D56726C00932E30</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>B55274391D56726C00932E30</string>
-			<key>remoteInfo</key>
-			<string>Etta</string>
-		</dict>
-		<key>B55274531D56726C00932E30</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>B55274391D56726C00932E30</string>
-			<key>targetProxy</key>
-			<string>B55274521D56726C00932E30</string>
-		</dict>
-		<key>B55274541D56726C00932E30</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B55274551D56726C00932E30</string>
-				<string>B55274571D56726C00932E30</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>EttaTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B55274551D56726C00932E30</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>EttaTests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B55274571D56726C00932E30</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B55274581D56726C00932E30</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>B55274611D56726C00932E30</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B55274591D56726C00932E30</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>9262503F3DD1E3415EFE6806</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B552745A1D56726C00932E30</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>B552745B1D56726C00932E30</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>B552746B1D56726C00932E30</string>
-			<key>buildPhases</key>
-			<array>
-				<string>F4A354B4C1F94ECD8355B133</string>
-				<string>B55274581D56726C00932E30</string>
-				<string>B55274591D56726C00932E30</string>
-				<string>B552745A1D56726C00932E30</string>
-				<string>20C19783FF3DA80F8BCB0335</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>B552745E1D56726C00932E30</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>EttaUITests</string>
-			<key>productName</key>
-			<string>EttaUITests</string>
-			<key>productReference</key>
-			<string>B552745C1D56726C00932E30</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.ui-testing</string>
-		</dict>
-		<key>B552745C1D56726C00932E30</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>EttaUITests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>B552745D1D56726C00932E30</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>B55274321D56726C00932E30</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>B55274391D56726C00932E30</string>
-			<key>remoteInfo</key>
-			<string>Etta</string>
-		</dict>
-		<key>B552745E1D56726C00932E30</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>B55274391D56726C00932E30</string>
-			<key>targetProxy</key>
-			<string>B552745D1D56726C00932E30</string>
-		</dict>
-		<key>B552745F1D56726C00932E30</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B55274601D56726C00932E30</string>
-				<string>B55274621D56726C00932E30</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>EttaUITests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B55274601D56726C00932E30</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>EttaUITests.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B55274611D56726C00932E30</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B55274601D56726C00932E30</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B55274621D56726C00932E30</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B55274631D56726C00932E30</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVES</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>ENABLE_TESTABILITY</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>YES</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_ACTIVE_COMPILATION_CONDITIONS</key>
-				<string>DEBUG</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Onone</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>B55274641D56726C00932E30</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>CLANG_ANALYZER_NONNULL</key>
-				<string>YES</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_DOCUMENTATION_COMMENTS</key>
-				<string>YES</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INFINITE_RECURSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_SUSPICIOUS_MOVES</key>
-				<string>YES</string>
-				<key>CLANG_WARN_UNREACHABLE_CODE</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DEBUG_INFORMATION_FORMAT</key>
-				<string>dwarf-with-dsym</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>ENABLE_STRICT_OBJC_MSGSEND</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_NO_COMMON_BLOCKS</key>
-				<string>YES</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES_AGGRESSIVE</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>10.0</string>
-				<key>MTL_ENABLE_DEBUG_INFO</key>
-				<string>NO</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SWIFT_OPTIMIZATION_LEVEL</key>
-				<string>-Owholemodule</string>
-				<key>TARGETED_DEVICE_FAMILY</key>
-				<string>1,2</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>B55274651D56726C00932E30</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B55274661D56726C00932E30</string>
-				<string>B55274671D56726C00932E30</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>B55274661D56726C00932E30</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C62DE18C01052B1165E8B70D</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>97JRRX372K</string>
-				<key>HEADER_SEARCH_PATHS</key>
-				<string>$(SDKROOT)/usr/include/libxml2</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Etta/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>constellation.Etta</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>BridgingHeader.h</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>B55274671D56726C00932E30</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C685D3FEF6137676754DAD35</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>97JRRX372K</string>
-				<key>HEADER_SEARCH_PATHS</key>
-				<string>$(SDKROOT)/usr/include/libxml2</string>
-				<key>INFOPLIST_FILE</key>
-				<string>Etta/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>constellation.Etta</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_OBJC_BRIDGING_HEADER</key>
-				<string>BridgingHeader.h</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>B55274681D56726C00932E30</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B55274691D56726C00932E30</string>
-				<string>B552746A1D56726C00932E30</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>B55274691D56726C00932E30</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>1DBDCBD913C9E772BB94A70A</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>97JRRX372K</string>
-				<key>INFOPLIST_FILE</key>
-				<string>EttaTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>constellation.EttaTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Etta.app/Etta</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>B552746A1D56726C00932E30</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A1DC5A5C11816CC63F2FDF2B</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>BUNDLE_LOADER</key>
-				<string>$(TEST_HOST)</string>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>97JRRX372K</string>
-				<key>INFOPLIST_FILE</key>
-				<string>EttaTests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>constellation.EttaTests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TEST_HOST</key>
-				<string>$(BUILT_PRODUCTS_DIR)/Etta.app/Etta</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>B552746B1D56726C00932E30</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>B552746C1D56726C00932E30</string>
-				<string>B552746D1D56726C00932E30</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>B552746C1D56726C00932E30</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>C7BACA7433420F20789471AE</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>97JRRX372K</string>
-				<key>INFOPLIST_FILE</key>
-				<string>EttaUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>constellation.EttaUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>Etta</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>B552746D1D56726C00932E30</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>A506C4E50F8009EF5D7182CA</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>DEVELOPMENT_TEAM</key>
-				<string>97JRRX372K</string>
-				<key>INFOPLIST_FILE</key>
-				<string>EttaUITests/Info.plist</string>
-				<key>LD_RUNPATH_SEARCH_PATHS</key>
-				<string>$(inherited) @executable_path/Frameworks @loader_path/Frameworks</string>
-				<key>PRODUCT_BUNDLE_IDENTIFIER</key>
-				<string>constellation.EttaUITests</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SWIFT_VERSION</key>
-				<string>3.0</string>
-				<key>TEST_TARGET_NAME</key>
-				<string>Etta</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>B552746E1D56762E00932E30</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Config.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B552746F1D56762E00932E30</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B552746E1D56762E00932E30</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B55274701D567D8E00932E30</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>Search.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B55274711D567D8E00932E30</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B55274701D567D8E00932E30</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B59309AD1D5784920042D0B1</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>net.daringfireball.markdown</string>
-			<key>path</key>
-			<string>README.md</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B5D15F4E1D56992C00A0FA03</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B55274551D56726C00932E30</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>B5FAEEBA1D5A6DB60025C5E8</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Build with SPM</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>cd "$(SRCROOT)"
-swift build -Xcc -fobjc-arc</string>
-		</dict>
-		<key>B5FAEEBB1D5A6DF30025C5E8</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.swift</string>
-			<key>path</key>
-			<string>PAckage.swift</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>B5FAEEBD1D5A701B0025C5E8</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>BridgingHeader.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C62DE18C01052B1165E8B70D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Etta.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Etta/Pods-Etta.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C685D3FEF6137676754DAD35</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Etta.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Etta/Pods-Etta.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C7BACA7433420F20789471AE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-EttaUITests.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-EttaUITests/Pods-EttaUITests.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D03302281F66BA76EE844516</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-EttaTests/Pods-EttaTests-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>D16CD16F7ADA0C312D5D3EF1</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>E8227E21EAAE4B667B00DC2D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Etta/Pods-Etta-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>F4A354B4C1F94ECD8355B133</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>&#128230; Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>B55274321D56726C00932E30</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9109BD27FB5D95C47AD4F8FE /* Pods_EttaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A27B7282EACD2CE25063FE /* Pods_EttaTests.framework */; };
+		9262503F3DD1E3415EFE6806 /* Pods_EttaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3967641622C8DC941CC45FDE /* Pods_EttaUITests.framework */; };
+		A893C58F7724214CFEE6D496 /* Pods_Etta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F473F2C00D197CFF459483 /* Pods_Etta.framework */; };
+		B552743E1D56726C00932E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552743D1D56726C00932E30 /* AppDelegate.swift */; };
+		B55274401D56726C00932E30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552743F1D56726C00932E30 /* ViewController.swift */; };
+		B55274431D56726C00932E30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55274411D56726C00932E30 /* Main.storyboard */; };
+		B55274461D56726C00932E30 /* Etta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B55274441D56726C00932E30 /* Etta.xcdatamodeld */; };
+		B55274481D56726C00932E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55274471D56726C00932E30 /* Assets.xcassets */; };
+		B552744B1D56726C00932E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55274491D56726C00932E30 /* LaunchScreen.storyboard */; };
+		B55274611D56726C00932E30 /* EttaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55274601D56726C00932E30 /* EttaUITests.swift */; };
+		B552746F1D56762E00932E30 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552746E1D56762E00932E30 /* Config.swift */; };
+		B55274711D567D8E00932E30 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55274701D567D8E00932E30 /* Search.swift */; };
+		B566EBA01D5B9AF6007ECCA1 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566EB9F1D5B9AF6007ECCA1 /* Parse.swift */; };
+		B5D15F4E1D56992C00A0FA03 /* EttaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55274551D56726C00932E30 /* EttaTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B55274521D56726C00932E30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B55274321D56726C00932E30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B55274391D56726C00932E30;
+			remoteInfo = Etta;
+		};
+		B552745D1D56726C00932E30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B55274321D56726C00932E30 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B55274391D56726C00932E30;
+			remoteInfo = Etta;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1DBDCBD913C9E772BB94A70A /* Pods-EttaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EttaTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EttaTests/Pods-EttaTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3967641622C8DC941CC45FDE /* Pods_EttaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EttaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46A27B7282EACD2CE25063FE /* Pods_EttaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EttaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1DC5A5C11816CC63F2FDF2B /* Pods-EttaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EttaTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EttaTests/Pods-EttaTests.release.xcconfig"; sourceTree = "<group>"; };
+		A506C4E50F8009EF5D7182CA /* Pods-EttaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EttaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EttaUITests/Pods-EttaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		B2F473F2C00D197CFF459483 /* Pods_Etta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Etta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B552743A1D56726C00932E30 /* Etta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Etta.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B552743D1D56726C00932E30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B552743F1D56726C00932E30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B55274421D56726C00932E30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B55274451D56726C00932E30 /* Etta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Etta.xcdatamodel; sourceTree = "<group>"; };
+		B55274471D56726C00932E30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B552744A1D56726C00932E30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B552744C1D56726C00932E30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B55274511D56726C00932E30 /* EttaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EttaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B55274551D56726C00932E30 /* EttaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EttaTests.swift; sourceTree = "<group>"; };
+		B55274571D56726C00932E30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B552745C1D56726C00932E30 /* EttaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EttaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B55274601D56726C00932E30 /* EttaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EttaUITests.swift; sourceTree = "<group>"; };
+		B55274621D56726C00932E30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B552746E1D56762E00932E30 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		B55274701D567D8E00932E30 /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		B566EB9F1D5B9AF6007ECCA1 /* Parse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parse.swift; sourceTree = "<group>"; };
+		B59309AD1D5784920042D0B1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B5FAEEBB1D5A6DF30025C5E8 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		C62DE18C01052B1165E8B70D /* Pods-Etta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Etta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Etta/Pods-Etta.debug.xcconfig"; sourceTree = "<group>"; };
+		C685D3FEF6137676754DAD35 /* Pods-Etta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Etta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Etta/Pods-Etta.release.xcconfig"; sourceTree = "<group>"; };
+		C7BACA7433420F20789471AE /* Pods-EttaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EttaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EttaUITests/Pods-EttaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B55274371D56726C00932E30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A893C58F7724214CFEE6D496 /* Pods_Etta.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B552744E1D56726C00932E30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9109BD27FB5D95C47AD4F8FE /* Pods_EttaTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B55274591D56726C00932E30 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9262503F3DD1E3415EFE6806 /* Pods_EttaUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49AB807D39B3E12A35DAF183 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2F473F2C00D197CFF459483 /* Pods_Etta.framework */,
+				46A27B7282EACD2CE25063FE /* Pods_EttaTests.framework */,
+				3967641622C8DC941CC45FDE /* Pods_EttaUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		768A403B2A939CA529E4D53C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C62DE18C01052B1165E8B70D /* Pods-Etta.debug.xcconfig */,
+				C685D3FEF6137676754DAD35 /* Pods-Etta.release.xcconfig */,
+				1DBDCBD913C9E772BB94A70A /* Pods-EttaTests.debug.xcconfig */,
+				A1DC5A5C11816CC63F2FDF2B /* Pods-EttaTests.release.xcconfig */,
+				C7BACA7433420F20789471AE /* Pods-EttaUITests.debug.xcconfig */,
+				A506C4E50F8009EF5D7182CA /* Pods-EttaUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B55274311D56726C00932E30 = {
+			isa = PBXGroup;
+			children = (
+				B5FAEEBB1D5A6DF30025C5E8 /* Package.swift */,
+				B59309AD1D5784920042D0B1 /* README.md */,
+				B552743C1D56726C00932E30 /* Etta */,
+				B55274541D56726C00932E30 /* EttaTests */,
+				B552745F1D56726C00932E30 /* EttaUITests */,
+				B552743B1D56726C00932E30 /* Products */,
+				768A403B2A939CA529E4D53C /* Pods */,
+				49AB807D39B3E12A35DAF183 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B552743B1D56726C00932E30 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B552743A1D56726C00932E30 /* Etta.app */,
+				B55274511D56726C00932E30 /* EttaTests.xctest */,
+				B552745C1D56726C00932E30 /* EttaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B552743C1D56726C00932E30 /* Etta */ = {
+			isa = PBXGroup;
+			children = (
+				B552746E1D56762E00932E30 /* Config.swift */,
+				B55274701D567D8E00932E30 /* Search.swift */,
+				B566EB9F1D5B9AF6007ECCA1 /* Parse.swift */,
+				B552743D1D56726C00932E30 /* AppDelegate.swift */,
+				B552743F1D56726C00932E30 /* ViewController.swift */,
+				B55274411D56726C00932E30 /* Main.storyboard */,
+				B55274471D56726C00932E30 /* Assets.xcassets */,
+				B55274491D56726C00932E30 /* LaunchScreen.storyboard */,
+				B552744C1D56726C00932E30 /* Info.plist */,
+				B55274441D56726C00932E30 /* Etta.xcdatamodeld */,
+			);
+			path = Etta;
+			sourceTree = "<group>";
+		};
+		B55274541D56726C00932E30 /* EttaTests */ = {
+			isa = PBXGroup;
+			children = (
+				B55274551D56726C00932E30 /* EttaTests.swift */,
+				B55274571D56726C00932E30 /* Info.plist */,
+			);
+			path = EttaTests;
+			sourceTree = "<group>";
+		};
+		B552745F1D56726C00932E30 /* EttaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B55274601D56726C00932E30 /* EttaUITests.swift */,
+				B55274621D56726C00932E30 /* Info.plist */,
+			);
+			path = EttaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B55274391D56726C00932E30 /* Etta */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B55274651D56726C00932E30 /* Build configuration list for PBXNativeTarget "Etta" */;
+			buildPhases = (
+				D16CD16F7ADA0C312D5D3EF1 /* 📦 Check Pods Manifest.lock */,
+				B55274361D56726C00932E30 /* Sources */,
+				B55274371D56726C00932E30 /* Frameworks */,
+				B55274381D56726C00932E30 /* Resources */,
+				0F07F5613E5A5928EEC6CAB2 /* 📦 Embed Pods Frameworks */,
+				E8227E21EAAE4B667B00DC2D /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Etta;
+			productName = Etta;
+			productReference = B552743A1D56726C00932E30 /* Etta.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B55274501D56726C00932E30 /* EttaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B55274681D56726C00932E30 /* Build configuration list for PBXNativeTarget "EttaTests" */;
+			buildPhases = (
+				AF09B6EA7F05E1A823EA81DD /* 📦 Check Pods Manifest.lock */,
+				B552744D1D56726C00932E30 /* Sources */,
+				B552744E1D56726C00932E30 /* Frameworks */,
+				B552744F1D56726C00932E30 /* Resources */,
+				015CC8E1E00502E863460FF6 /* 📦 Embed Pods Frameworks */,
+				D03302281F66BA76EE844516 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B55274531D56726C00932E30 /* PBXTargetDependency */,
+			);
+			name = EttaTests;
+			productName = EttaTests;
+			productReference = B55274511D56726C00932E30 /* EttaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B552745B1D56726C00932E30 /* EttaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B552746B1D56726C00932E30 /* Build configuration list for PBXNativeTarget "EttaUITests" */;
+			buildPhases = (
+				F4A354B4C1F94ECD8355B133 /* 📦 Check Pods Manifest.lock */,
+				B55274581D56726C00932E30 /* Sources */,
+				B55274591D56726C00932E30 /* Frameworks */,
+				B552745A1D56726C00932E30 /* Resources */,
+				20C19783FF3DA80F8BCB0335 /* 📦 Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B552745E1D56726C00932E30 /* PBXTargetDependency */,
+			);
+			name = EttaUITests;
+			productName = EttaUITests;
+			productReference = B552745C1D56726C00932E30 /* EttaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B55274321D56726C00932E30 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Constellation Software";
+				TargetAttributes = {
+					B55274391D56726C00932E30 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 97JRRX372K;
+						ProvisioningStyle = Automatic;
+					};
+					B55274501D56726C00932E30 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 97JRRX372K;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B55274391D56726C00932E30;
+					};
+					B552745B1D56726C00932E30 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 97JRRX372K;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B55274391D56726C00932E30;
+					};
+				};
+			};
+			buildConfigurationList = B55274351D56726C00932E30 /* Build configuration list for PBXProject "Etta" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B55274311D56726C00932E30;
+			productRefGroup = B552743B1D56726C00932E30 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B55274391D56726C00932E30 /* Etta */,
+				B55274501D56726C00932E30 /* EttaTests */,
+				B552745B1D56726C00932E30 /* EttaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B55274381D56726C00932E30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B552744B1D56726C00932E30 /* LaunchScreen.storyboard in Resources */,
+				B55274481D56726C00932E30 /* Assets.xcassets in Resources */,
+				B55274431D56726C00932E30 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B552744F1D56726C00932E30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B552745A1D56726C00932E30 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		015CC8E1E00502E863460FF6 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EttaTests/Pods-EttaTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0F07F5613E5A5928EEC6CAB2 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Etta/Pods-Etta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		20C19783FF3DA80F8BCB0335 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EttaUITests/Pods-EttaUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF09B6EA7F05E1A823EA81DD /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D03302281F66BA76EE844516 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EttaTests/Pods-EttaTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D16CD16F7ADA0C312D5D3EF1 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E8227E21EAAE4B667B00DC2D /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Etta/Pods-Etta-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4A354B4C1F94ECD8355B133 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B55274361D56726C00932E30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B55274401D56726C00932E30 /* ViewController.swift in Sources */,
+				B566EBA01D5B9AF6007ECCA1 /* Parse.swift in Sources */,
+				B552746F1D56762E00932E30 /* Config.swift in Sources */,
+				B55274711D567D8E00932E30 /* Search.swift in Sources */,
+				B55274461D56726C00932E30 /* Etta.xcdatamodeld in Sources */,
+				B552743E1D56726C00932E30 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B552744D1D56726C00932E30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5D15F4E1D56992C00A0FA03 /* EttaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B55274581D56726C00932E30 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B55274611D56726C00932E30 /* EttaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B55274531D56726C00932E30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B55274391D56726C00932E30 /* Etta */;
+			targetProxy = B55274521D56726C00932E30 /* PBXContainerItemProxy */;
+		};
+		B552745E1D56726C00932E30 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B55274391D56726C00932E30 /* Etta */;
+			targetProxy = B552745D1D56726C00932E30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B55274411D56726C00932E30 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B55274421D56726C00932E30 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B55274491D56726C00932E30 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B552744A1D56726C00932E30 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B55274631D56726C00932E30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B55274641D56726C00932E30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B55274661D56726C00932E30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C62DE18C01052B1165E8B70D /* Pods-Etta.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 97JRRX372K;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = Etta/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = constellation.Etta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B55274671D56726C00932E30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C685D3FEF6137676754DAD35 /* Pods-Etta.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 97JRRX372K;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = Etta/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = constellation.Etta;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B55274691D56726C00932E30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DBDCBD913C9E772BB94A70A /* Pods-EttaTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 97JRRX372K;
+				INFOPLIST_FILE = EttaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = constellation.EttaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Etta.app/Etta";
+			};
+			name = Debug;
+		};
+		B552746A1D56726C00932E30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A1DC5A5C11816CC63F2FDF2B /* Pods-EttaTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 97JRRX372K;
+				INFOPLIST_FILE = EttaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = constellation.EttaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Etta.app/Etta";
+			};
+			name = Release;
+		};
+		B552746C1D56726C00932E30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7BACA7433420F20789471AE /* Pods-EttaUITests.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 97JRRX372K;
+				INFOPLIST_FILE = EttaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = constellation.EttaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Etta;
+			};
+			name = Debug;
+		};
+		B552746D1D56726C00932E30 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A506C4E50F8009EF5D7182CA /* Pods-EttaUITests.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 97JRRX372K;
+				INFOPLIST_FILE = EttaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = constellation.EttaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Etta;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B55274351D56726C00932E30 /* Build configuration list for PBXProject "Etta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B55274631D56726C00932E30 /* Debug */,
+				B55274641D56726C00932E30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B55274651D56726C00932E30 /* Build configuration list for PBXNativeTarget "Etta" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B55274661D56726C00932E30 /* Debug */,
+				B55274671D56726C00932E30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B55274681D56726C00932E30 /* Build configuration list for PBXNativeTarget "EttaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B55274691D56726C00932E30 /* Debug */,
+				B552746A1D56726C00932E30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B552746B1D56726C00932E30 /* Build configuration list for PBXNativeTarget "EttaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B552746C1D56726C00932E30 /* Debug */,
+				B552746D1D56726C00932E30 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B55274441D56726C00932E30 /* Etta.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B55274451D56726C00932E30 /* Etta.xcdatamodel */,
+			);
+			currentVersion = B55274451D56726C00932E30 /* Etta.xcdatamodel */;
+			path = Etta.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B55274321D56726C00932E30 /* Project object */;
+}

@@ -10,5 +10,5 @@ import Foundation
 
 
 struct Config {
-    static let eoURL = "http://www.etymonline.com/index.php"
+    static let eoURL = "https://ettaserver.herokuapp.com/search/"
 }

@@ -13,6 +13,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+        var sq = SearchQuery(term: "benjamin", result: nil)
+        sq.search { (response) in
+            sq.result = response
+            print(response)
+        }
     }
 
     override func didReceiveMemoryWarning() {
