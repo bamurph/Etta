@@ -28,18 +28,29 @@ class ViewController: UIViewController {
 
 
     @IBAction func searchChanged(_ sender: UITextField) {
+
         guard sender.text != nil else {
             return
         }
         let sq = SearchQuery(term: sender.text!)
-        sq.search { (response) in
-            let p = Parser(rawContent: response!)
-            let c = p.parsedContent().first!.textContent
-            DispatchQueue.main.async {
-                self.resultTextView.attributedText = c.htmlAttributedString()
+
+        do {
+            try sq.search { (response) in
+                let p = Parser(rawContent: response!)
+
+                /// TODO: return all results not just the first
+                let c = p.parsedContent().first?.textContent
+                DispatchQueue.main.async {
+                    self.resultTextView.attributedText = c?.htmlAttributedString()
+                }
             }
+
+        } catch let error {
+            print(error)
         }
 
     }
+
+    
 }
 

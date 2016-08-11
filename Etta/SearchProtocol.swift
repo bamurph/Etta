@@ -12,7 +12,8 @@ import HTMLReader
 protocol SearchProtocol {
     var term: String { get }
     var result: String? { get set }
-    func search(_ completionHandler: (response: String?) -> Void)
+    func search(_ completionHandler: (response: String?) -> Void) throws
+    func cancelPreviousSearches()
 }
 
 extension SearchProtocol {
@@ -21,11 +22,18 @@ extension SearchProtocol {
     ///
     /// - parameter text: the text to search for
     /// - parameter completionHandler: function to execute once the task is completed
-    internal func search (_ completionHandler: (response:String?) -> Void) {
+    internal func search (_ completionHandler: (response:String?) -> Void) throws {
+
+        /// Cancel outstanding requests
+        cancelPreviousSearches()
 
         /// Prepare the session and request objects
-        let session = URLSession(configuration: URLSessionConfiguration.default)
-        let request = URLRequest(url: URL(string: Config.eoURL + "/" + self.term)!)
+        guard let requestURL = URL(string: Config.eoURL)?.appendingPathComponent(self.term) else {
+            throw SearchError.invalidURL
+        }
+        let request = URLRequest(url: requestURL)
+        let session = URLSession.shared
+
         
         /// Define the task to perform - passed in as a closure
         let task : URLSessionDataTask = session.dataTask(with: request) { (data, response, error) -> Void in
@@ -42,10 +50,20 @@ extension SearchProtocol {
 
             /// Define the response object
             let response = String(data: data, encoding: String.Encoding.utf8)
-            print(response)
             completionHandler(response: response)
         }
         task.resume()
+    }
+
+    /// Cancel prior search(es). Use at the beginning of a new search.
+    func cancelPreviousSearches() {
+        let session = URLSession.shared
+        session.getAllTasks { (tasks) in
+            guard tasks.count > 0 else { return }
+            tasks.forEach({ (task) in
+                task.cancel()
+            })
+        }
     }
 }
 
