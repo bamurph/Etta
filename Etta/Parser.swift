@@ -8,4 +8,5 @@
 
 struct Parser: ParserProtocol {
     let rawContent: String
+    
 }

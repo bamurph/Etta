@@ -36,7 +36,8 @@ class ViewController: UIViewController {
             let p = Parser(rawContent: response!)
             let c = p.parsedContent()
             DispatchQueue.main.async {
-                self.resultTextView.text = c
+                let s = NSAttributedString.init
+                self.resultTextView.text = c.first!.textContent
             }
         }
 

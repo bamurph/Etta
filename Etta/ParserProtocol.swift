@@ -11,15 +11,19 @@ import HTMLReader
 
 protocol ParserProtocol {
     var rawContent: String { get }
-    func parsedContent() -> String?
+    func parsedContent() -> [HTMLElement]
+    func dictionaryEntriesIn(_ source: HTMLNode) -> [HTMLElement]
+
 
 }
 
 extension ParserProtocol {
-    internal func parsedContent() -> String? {
+    internal func parsedContent() -> [HTMLElement] {
         let document = HTMLDocument(string: rawContent)
-        let div = document.firstNode(matchingSelector: "#dictionary")
-        return div?.textContent
+        return dictionaryEntriesIn(document)
+    }
+
+    internal func dictionaryEntriesIn(_ source: HTMLNode) -> [HTMLElement] {
+        return source.nodes(matchingSelector: "#dictionary")
     }
 }
-
