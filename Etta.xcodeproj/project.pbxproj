@@ -65,10 +65,10 @@
 		B55274601D56726C00932E30 /* EttaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EttaUITests.swift; sourceTree = "<group>"; };
 		B55274621D56726C00932E30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B552746E1D56762E00932E30 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Config.swift; path = Etta/Config.swift; sourceTree = "<group>"; };
-		B55274701D567D8E00932E30 /* SearchProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchProtocol.swift; path = Etta/SearchProtocol.swift; sourceTree = "<group>"; };
-		B566EB9F1D5B9AF6007ECCA1 /* ParserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParserProtocol.swift; path = Etta/ParserProtocol.swift; sourceTree = "<group>"; };
-		B566EBA11D5BA1A1007ECCA1 /* SearchQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchQuery.swift; path = Etta/SearchQuery.swift; sourceTree = "<group>"; };
-		B566EBA31D5BA1C3007ECCA1 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Etta/Parser.swift; sourceTree = "<group>"; };
+		B55274701D567D8E00932E30 /* SearchProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProtocol.swift; sourceTree = "<group>"; };
+		B566EB9F1D5B9AF6007ECCA1 /* ParserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserProtocol.swift; sourceTree = "<group>"; };
+		B566EBA11D5BA1A1007ECCA1 /* SearchQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchQuery.swift; sourceTree = "<group>"; };
+		B566EBA31D5BA1C3007ECCA1 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		B59309AD1D5784920042D0B1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B596CD001D5CD6C8009CEBA9 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		B5FAEEBB1D5A6DF30025C5E8 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
@@ -131,28 +131,24 @@
 		B55274311D56726C00932E30 = {
 			isa = PBXGroup;
 			children = (
-				B566EBA51D5BA1DE007ECCA1 /* Protocols */,
-				B55274701D567D8E00932E30 /* SearchProtocol.swift */,
-				B566EB9F1D5B9AF6007ECCA1 /* ParserProtocol.swift */,
-				B566EBA61D5BA1E6007ECCA1 /* Structs */,
-				B566EBA11D5BA1A1007ECCA1 /* SearchQuery.swift */,
-				B566EBA31D5BA1C3007ECCA1 /* Parser.swift */,
 				B552743D1D56726C00932E30 /* AppDelegate.swift */,
 				B552743F1D56726C00932E30 /* ViewController.swift */,
-				B55274411D56726C00932E30 /* Main.storyboard */,
-				B55274471D56726C00932E30 /* Assets.xcassets */,
-				B55274491D56726C00932E30 /* LaunchScreen.storyboard */,
-				B552744C1D56726C00932E30 /* Info.plist */,
-				B55274441D56726C00932E30 /* Etta.xcdatamodeld */,
-				B55274541D56726C00932E30 /* EttaTests */,
-				B596CD001D5CD6C8009CEBA9 /* Helpers.swift */,
 				B552746E1D56762E00932E30 /* Config.swift */,
 				B5FAEEBB1D5A6DF30025C5E8 /* Package.swift */,
+				B596CD001D5CD6C8009CEBA9 /* Helpers.swift */,
+				B55274411D56726C00932E30 /* Main.storyboard */,
+				B55274491D56726C00932E30 /* LaunchScreen.storyboard */,
+				B566EBA61D5BA1E6007ECCA1 /* Structs */,
+				B566EBA51D5BA1DE007ECCA1 /* Protocols */,
 				B59309AD1D5784920042D0B1 /* README.md */,
+				B552744C1D56726C00932E30 /* Info.plist */,
+				B55274471D56726C00932E30 /* Assets.xcassets */,
+				B55274441D56726C00932E30 /* Etta.xcdatamodeld */,
+				B55274541D56726C00932E30 /* EttaTests */,
 				B552745F1D56726C00932E30 /* EttaUITests */,
-				B552743B1D56726C00932E30 /* Products */,
-				768A403B2A939CA529E4D53C /* Pods */,
 				49AB807D39B3E12A35DAF183 /* Frameworks */,
+				768A403B2A939CA529E4D53C /* Pods */,
+				B552743B1D56726C00932E30 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,6 +183,8 @@
 		B566EBA51D5BA1DE007ECCA1 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				B566EB9F1D5B9AF6007ECCA1 /* ParserProtocol.swift */,
+				B55274701D567D8E00932E30 /* SearchProtocol.swift */,
 			);
 			name = Protocols;
 			path = Etta;
@@ -195,6 +193,8 @@
 		B566EBA61D5BA1E6007ECCA1 /* Structs */ = {
 			isa = PBXGroup;
 			children = (
+				B566EBA11D5BA1A1007ECCA1 /* SearchQuery.swift */,
+				B566EBA31D5BA1C3007ECCA1 /* Parser.swift */,
 			);
 			name = Structs;
 			path = Etta;

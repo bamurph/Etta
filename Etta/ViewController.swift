@@ -34,10 +34,9 @@ class ViewController: UIViewController {
         let sq = SearchQuery(term: sender.text!)
         sq.search { (response) in
             let p = Parser(rawContent: response!)
-            let c = p.parsedContent()
+            let c = p.parsedContent().first!.textContent
             DispatchQueue.main.async {
-                let s = NSAttributedString.init
-                self.resultTextView.text = c.first!.textContent
+                self.resultTextView.attributedText = c.htmlAttributedString()
             }
         }
 
