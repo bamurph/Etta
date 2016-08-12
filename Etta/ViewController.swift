@@ -42,6 +42,8 @@ class ViewController: UIViewController {
                 let c = p.parsedContent().first?.textContent
                 DispatchQueue.main.async {
                     self.resultTextView.attributedText = c?.htmlAttributedString()
+                    print(["~", c], separator: " ", terminator: "\n")
+                    print(["~", c?.htmlAttributedString()], separator: " ", terminator: "\n")
                 }
             }
 

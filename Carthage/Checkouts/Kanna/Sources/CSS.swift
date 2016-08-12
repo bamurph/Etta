@@ -30,7 +30,7 @@ CSS
 public struct CSS {
     /**
     CSS3 selector to XPath
-    
+
     @param selector CSS3 selector
     
     @return XPath

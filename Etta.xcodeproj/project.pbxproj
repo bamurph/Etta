@@ -133,20 +133,10 @@
 		B55274311D56726C00932E30 = {
 			isa = PBXGroup;
 			children = (
-				B596CD021D5CFA7C009CEBA9 /* Errors.swift */,
-				B552743D1D56726C00932E30 /* AppDelegate.swift */,
-				B552743F1D56726C00932E30 /* ViewController.swift */,
-				B552746E1D56762E00932E30 /* Config.swift */,
-				B5FAEEBB1D5A6DF30025C5E8 /* Package.swift */,
-				B596CD001D5CD6C8009CEBA9 /* Helpers.swift */,
-				B55274411D56726C00932E30 /* Main.storyboard */,
-				B55274491D56726C00932E30 /* LaunchScreen.storyboard */,
-				B566EBA61D5BA1E6007ECCA1 /* Structs */,
-				B566EBA51D5BA1DE007ECCA1 /* Protocols */,
-				B59309AD1D5784920042D0B1 /* README.md */,
-				B552744C1D56726C00932E30 /* Info.plist */,
+				B596CD091D5D1583009CEBA9 /* Application */,
+				B566EBA61D5BA1E6007ECCA1 /* Models */,
+				B596CD0A1D5D160E009CEBA9 /* Common */,
 				B55274471D56726C00932E30 /* Assets.xcassets */,
-				B55274441D56726C00932E30 /* Etta.xcdatamodeld */,
 				B55274541D56726C00932E30 /* EttaTests */,
 				B552745F1D56726C00932E30 /* EttaUITests */,
 				49AB807D39B3E12A35DAF183 /* Frameworks */,
@@ -190,17 +180,42 @@
 				B55274701D567D8E00932E30 /* SearchProtocol.swift */,
 			);
 			name = Protocols;
-			path = Etta;
 			sourceTree = "<group>";
 		};
-		B566EBA61D5BA1E6007ECCA1 /* Structs */ = {
+		B566EBA61D5BA1E6007ECCA1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B566EBA51D5BA1DE007ECCA1 /* Protocols */,
 				B566EBA11D5BA1A1007ECCA1 /* SearchQuery.swift */,
 				B566EBA31D5BA1C3007ECCA1 /* Parser.swift */,
 			);
-			name = Structs;
+			name = Models;
 			path = Etta;
+			sourceTree = "<group>";
+		};
+		B596CD091D5D1583009CEBA9 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				B552743D1D56726C00932E30 /* AppDelegate.swift */,
+				B552743F1D56726C00932E30 /* ViewController.swift */,
+				B55274491D56726C00932E30 /* LaunchScreen.storyboard */,
+				B55274411D56726C00932E30 /* Main.storyboard */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		B596CD0A1D5D160E009CEBA9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B55274441D56726C00932E30 /* Etta.xcdatamodeld */,
+				B552744C1D56726C00932E30 /* Info.plist */,
+				B59309AD1D5784920042D0B1 /* README.md */,
+				B5FAEEBB1D5A6DF30025C5E8 /* Package.swift */,
+				B596CD021D5CFA7C009CEBA9 /* Errors.swift */,
+				B596CD001D5CD6C8009CEBA9 /* Helpers.swift */,
+				B552746E1D56762E00932E30 /* Config.swift */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
