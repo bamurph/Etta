@@ -23,7 +23,13 @@ extension ParserProtocol {
         return dictionaryEntriesIn(document)
     }
 
-    internal func dictionaryEntriesIn(_ source: HTMLNode) -> [HTMLElement] {
-        return source.nodes(matchingSelector: "#dictionary")
+    internal func dictionaryEntriesIn(_ source: HTMLNode) -> [HTMLDictionaryEntry] {
+        let dictionary = source.firstNode(matchingSelector: "#dictionary")
+        let terms        = dictionary?.nodes(matchingSelector: "dt") ?? [HTMLElement]()
+        let descriptions = dictionary?.nodes(matchingSelector: "dd") ?? [HTMLElement]()
+        let entries = Array(zip(terms, descriptions))
+            .map { HTMLDictionaryEntry(term: $0.0,
+                                       description: $0.1) }
+        return entries
     }
 }
