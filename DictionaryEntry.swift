@@ -12,9 +12,13 @@ import HTMLReader
 struct HTMLDictionaryEntry {
     let term: HTMLElement
     let description: HTMLElement
+
+    func linkedText() -> [String] {
+        return description.nodes(matchingSelector: "a").map { $0.textContent}
+    }
+
+    
+
 }
 
-struct DictionaryEntry {
-    let term: NSAttributedString
-    let description: NSAttributedString
-}
+
