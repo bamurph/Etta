@@ -22,6 +22,7 @@
 		B566EBA01D5B9AF6007ECCA1 /* ParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566EB9F1D5B9AF6007ECCA1 /* ParserProtocol.swift */; };
 		B566EBA21D5BA1A1007ECCA1 /* SearchQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566EBA11D5BA1A1007ECCA1 /* SearchQuery.swift */; };
 		B566EBA41D5BA1C3007ECCA1 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566EBA31D5BA1C3007ECCA1 /* Parser.swift */; };
+		B57E3BE81D6248D8007ECA27 /* EttaResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57E3BE71D6248D8007ECA27 /* EttaResultTableViewCell.swift */; };
 		B596CD011D5CD6C8009CEBA9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596CD001D5CD6C8009CEBA9 /* Helpers.swift */; };
 		B596CD031D5CFA7C009CEBA9 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596CD021D5CFA7C009CEBA9 /* Errors.swift */; };
 		B596CD0C1D5DD603009CEBA9 /* DictionaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596CD0B1D5DD603009CEBA9 /* DictionaryEntry.swift */; };
@@ -71,6 +72,7 @@
 		B566EB9F1D5B9AF6007ECCA1 /* ParserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserProtocol.swift; sourceTree = "<group>"; };
 		B566EBA11D5BA1A1007ECCA1 /* SearchQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchQuery.swift; sourceTree = "<group>"; };
 		B566EBA31D5BA1C3007ECCA1 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		B57E3BE71D6248D8007ECA27 /* EttaResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EttaResultTableViewCell.swift; sourceTree = "<group>"; };
 		B59309AD1D5784920042D0B1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B596CD001D5CD6C8009CEBA9 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		B596CD021D5CFA7C009CEBA9 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				B596CD091D5D1583009CEBA9 /* Application */,
+				B57E3BE61D623FDF007ECA27 /* Views */,
 				B566EBA61D5BA1E6007ECCA1 /* Models */,
 				B596CD0A1D5D160E009CEBA9 /* Common */,
 				B55274471D56726C00932E30 /* Assets.xcassets */,
@@ -194,6 +197,14 @@
 			);
 			name = Models;
 			path = Etta;
+			sourceTree = "<group>";
+		};
+		B57E3BE61D623FDF007ECA27 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B57E3BE71D6248D8007ECA27 /* EttaResultTableViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		B596CD091D5D1583009CEBA9 /* Application */ = {
@@ -493,6 +504,7 @@
 				B596CD0C1D5DD603009CEBA9 /* DictionaryEntry.swift in Sources */,
 				B566EBA01D5B9AF6007ECCA1 /* ParserProtocol.swift in Sources */,
 				B552746F1D56762E00932E30 /* Config.swift in Sources */,
+				B57E3BE81D6248D8007ECA27 /* EttaResultTableViewCell.swift in Sources */,
 				B55274711D567D8E00932E30 /* SearchProtocol.swift in Sources */,
 				B596CD011D5CD6C8009CEBA9 /* Helpers.swift in Sources */,
 				B566EBA41D5BA1C3007ECCA1 /* Parser.swift in Sources */,

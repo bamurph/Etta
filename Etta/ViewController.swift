@@ -7,18 +7,18 @@
 //
 
 import UIKit
+import HTMLReader
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var searchBox: UITextView!
-    @IBOutlet weak var resultTextView: UITextView!
+    @IBOutlet weak var searchBox: UITextField!
+    @IBOutlet weak var resultTableView: UITableView!
 
+    var entries: [HTMLDictionaryEntry] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-
-
+        configureTableView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,31 +28,51 @@ class ViewController: UIViewController {
 
 
     @IBAction func searchChanged(_ sender: UITextField) {
-
         guard sender.text != nil else {
             return
         }
-        let sq = SearchQuery(term: sender.text!)
+
+        let query = SearchQuery(term: sender.text!)
 
         do {
-            try sq.search { (response) in
-                let p = Parser(rawContent: response!)
-
-                /// TODO: return all results not just the first
-                let c = p.parsedContent().first?.description.textContent
+            try query.search { (response) in
                 DispatchQueue.main.async {
-                    self.resultTextView.attributedText = c?.htmlAttributedString()
-//                    print(["~", c], separator: " ", terminator: "\n")
-//                    print(["~", c?.htmlAttributedString()], separator: " ", terminator: "\n")
+                    self.entries = Parser(rawContent: response!).parsedContent()
+                    self.resultTableView.reloadData()
+                    print(self.entries.count)
                 }
             }
-
         } catch let error {
             print(error)
         }
+    }
+
+    func configureTableView() {
+        resultTableView.estimatedRowHeight = 150
+        resultTableView.rowHeight = UITableViewAutomaticDimension
+    }
+
+}
+
+
+// MARK: - Table View Protocol Conformance
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return entries.count
+    }
+
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EttaResultCell", for: indexPath) as! EttaResultTableViewCell
+        cell.term.text = entries[indexPath.item].termText()
+        cell.entryDescription.text = entries[indexPath.item].descriptionText()
+        print("~", cell.textLabel?.text)
+        return cell
 
     }
 
-    
 }
 

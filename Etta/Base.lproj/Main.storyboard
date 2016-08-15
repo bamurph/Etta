@@ -19,43 +19,84 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6bI-LW-c7T">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="L0f-mL-f8o">
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6bI-LW-c7T">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="ScO-Jv-Dlv"/>
+                                        </constraints>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="searchChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="c84-UM-i0R"/>
+                                        </connections>
+                                    </textField>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="275" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W6Z-Kz-3Q0">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EttaResultCell" rowHeight="275" id="jbV-WJ-NWh" userLabel="EttaResult TVC" customClass="EttaResultTableViewCell" customModule="Etta">
+                                                <rect key="frame" x="0.0" y="28" width="319" height="275"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jbV-WJ-NWh" id="Goh-Mw-32n">
+                                                    <frame key="frameInset" width="319" height="274"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CUb-W7-WOY">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5yM-RU-Zqc">
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="5yM-RU-Zqc" secondAttribute="bottom" id="2y8-n7-UUi"/>
+                                                        <constraint firstItem="CUb-W7-WOY" firstAttribute="top" secondItem="Goh-Mw-32n" secondAttribute="topMargin" constant="3" id="65W-9e-fCc"/>
+                                                        <constraint firstItem="5yM-RU-Zqc" firstAttribute="leading" secondItem="CUb-W7-WOY" secondAttribute="leading" id="6A7-tO-tkx"/>
+                                                        <constraint firstAttribute="leadingMargin" secondItem="CUb-W7-WOY" secondAttribute="leading" id="UyW-BF-ztF"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="5yM-RU-Zqc" secondAttribute="trailing" id="fQa-F9-Llf"/>
+                                                        <constraint firstItem="5yM-RU-Zqc" firstAttribute="top" secondItem="CUb-W7-WOY" secondAttribute="bottom" constant="8" id="mGq-ua-7eC"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="entryDescription" destination="5yM-RU-Zqc" id="0WH-wA-Gus"/>
+                                                    <outlet property="term" destination="CUb-W7-WOY" id="beu-Fo-hRd"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="JGT-Li-Gq4"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="yV1-jY-kfR"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="220" id="DQU-0O-5hP"/>
+                                    <constraint firstItem="W6Z-Kz-3Q0" firstAttribute="top" secondItem="6bI-LW-c7T" secondAttribute="bottom" constant="8" symbolic="YES" id="o7n-Fw-ZSA"/>
                                 </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="searchChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="c84-UM-i0R"/>
-                                </connections>
-                            </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5iE-1H-CQ4" customClass="ReloadingTextView" customModule="Etta" customModuleProvider="target">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
-                            </textView>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="5iE-1H-CQ4" secondAttribute="trailing" constant="39" id="Bci-nh-ADu"/>
-                            <constraint firstItem="6bI-LW-c7T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="C1B-cB-P4x"/>
-                            <constraint firstItem="5iE-1H-CQ4" firstAttribute="leading" secondItem="6bI-LW-c7T" secondAttribute="leading" id="ENu-ev-Wrk"/>
-                            <constraint firstItem="5iE-1H-CQ4" firstAttribute="top" secondItem="6bI-LW-c7T" secondAttribute="bottom" constant="8" id="QQ6-6v-ryn"/>
-                            <constraint firstItem="6bI-LW-c7T" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gW8-QH-c79"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5iE-1H-CQ4" secondAttribute="bottom" constant="311" id="h6b-Sj-qV5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W6Z-Kz-3Q0" secondAttribute="bottom" id="0F3-1g-Ntd"/>
+                            <constraint firstItem="W6Z-Kz-3Q0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="F8P-up-maI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W6Z-Kz-3Q0" secondAttribute="trailing" constant="12" id="PrZ-5B-IDQ"/>
+                            <constraint firstItem="6bI-LW-c7T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="iOj-Pw-dMB"/>
+                            <constraint firstItem="L0f-mL-f8o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o0L-em-tm3"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="resultTextView" destination="5iE-1H-CQ4" id="6OP-7H-8XM"/>
-                        <outlet property="searchBox" destination="5iE-1H-CQ4" id="gfw-Wa-m7b"/>
+                        <outlet property="resultTableView" destination="W6Z-Kz-3Q0" id="T9M-Eh-eUH"/>
+                        <outlet property="searchBox" destination="6bI-LW-c7T" id="8Sg-2E-0LY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-55" y="68"/>
+            <point key="canvasLocation" x="-55.200000000000003" y="67.916041979010501"/>
         </scene>
     </scenes>
 </document>
