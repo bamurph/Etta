@@ -39,11 +39,11 @@ class ViewController: UIViewController {
                 let p = Parser(rawContent: response!)
 
                 /// TODO: return all results not just the first
-                let c = p.parsedContent().first?.textContent
+                let c = p.parsedContent().first?.description.textContent
                 DispatchQueue.main.async {
                     self.resultTextView.attributedText = c?.htmlAttributedString()
-                    print(["~", c], separator: " ", terminator: "\n")
-                    print(["~", c?.htmlAttributedString()], separator: " ", terminator: "\n")
+//                    print(["~", c], separator: " ", terminator: "\n")
+//                    print(["~", c?.htmlAttributedString()], separator: " ", terminator: "\n")
                 }
             }
 
