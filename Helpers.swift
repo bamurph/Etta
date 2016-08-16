@@ -17,3 +17,35 @@ extension String {
     }
 }
 
+// MARK: - Helper method to find ranges of all occurances of a string in another string.
+extension NSString {
+    /// Extract ranges matching a string recursively
+    ///
+    /// - parameter string:     the string to match against
+    /// - parameter collection: accumulator to collect ranges
+    ///
+    /// - returns: array of ranges of indexes matching the string
+    func ranges(matching string: String, collection: [(NSRange, String)] = [],  offset: Int = 0) -> [(NSRange, String)] {
+        let foundRange = (self as NSString).range(of: string)
+
+        guard foundRange.location != NSNotFound else {
+            return collection
+        }
+
+        let newText = self.substring(from: foundRange.location + foundRange.length) as NSString
+        let stringRange = NSMakeRange(foundRange.location + offset, foundRange.length)
+        return newText.ranges(matching: string,
+                              collection: collection + [(stringRange, string)],
+                              offset: foundRange.location + foundRange.length)
+    }
+
+    func rangesMatching(_ strings: [String]) -> [(NSRange, String)] {
+        return strings
+            .flatMap { self.ranges(matching: $0)}
+            .reduce([], +)
+    }
+    
+}
+
+
+
