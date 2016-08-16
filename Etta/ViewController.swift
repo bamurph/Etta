@@ -68,8 +68,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EttaResultCell", for: indexPath) as! EttaResultTableViewCell
         cell.term.text = entries[indexPath.item].termText()
+        cell.links = entries[indexPath.item].linkedText()
         cell.entryDescription.text = entries[indexPath.item].descriptionText()
         print("~", cell.textLabel?.text)
+        cell.addLinksToEntryDescription()
         return cell
 
     }
