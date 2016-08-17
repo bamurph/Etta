@@ -26,7 +26,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func configureTableView() {
+        resultTableView.estimatedRowHeight = 150
+        resultTableView.rowHeight = UITableViewAutomaticDimension
+    }
 
+    // MARK:  Actions
     @IBAction func searchChanged(_ sender: UITextField) {
         guard sender.text != nil else {
             return
@@ -47,16 +52,43 @@ class ViewController: UIViewController {
         }
     }
 
-    func configureTableView() {
-        resultTableView.estimatedRowHeight = 150
-        resultTableView.rowHeight = UITableViewAutomaticDimension
+    @IBAction func textTapped(_ sender: UITapGestureRecognizer) {
+        print("Tap!")
+        guard let textView = (sender.view as? UITextView) else {
+            return
+        }
+
+        let layoutManager = textView.layoutManager
+        var location: CGPoint = sender.location(in: textView)
+        location.x -= textView.textContainerInset.left
+        location.y -= textView.textContainerInset.top
+
+        var charIndex = layoutManager.characterIndex(for: location, in: textView.textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
+
+        guard charIndex < textView.textStorage.length else {
+            return
+        }
+        print(charIndex)
+
+        var range = NSRange(location: 0, length: 0)
+
+        guard let stringVal = textView.attributedText?.attribute("SearchText", at: charIndex, effectiveRange: &range) as? NSString else {
+            return
+        }
+
+        let tappedPhrase = (textView.attributedText.string as NSString).substring(with: range)
+        var mutableText = textView.attributedText.mutableCopy() as! NSMutableAttributedString
+        mutableText.addAttributes([NSForegroundColorAttributeName: UIColor.red], range: range)
+        textView.attributedText = mutableText
     }
 
-}
+    }
+
 
 
 // MARK: - Table View Protocol Conformance
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -64,17 +96,23 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return entries.count
     }
 
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EttaResultCell", for: indexPath) as! EttaResultTableViewCell
         cell.term.text = entries[indexPath.item].termText()
         cell.links = entries[indexPath.item].linkedText()
         cell.entryDescription.text = entries[indexPath.item].descriptionText()
-        print("~", cell.textLabel?.text)
+        cell.delegate = self
         cell.addLinksToEntryDescription()
         return cell
 
     }
-
 }
+
+extension ViewController: LinkSearchDelegate {
+    func searchFor(_ term: String) {
+        searchBox.text = term
+        searchChanged(searchBox)
+    }
+}
+
 

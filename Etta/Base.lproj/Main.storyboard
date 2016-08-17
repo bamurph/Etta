@@ -49,6 +49,7 @@
                                                         </label>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="749" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5yM-RU-Zqc">
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <gestureRecognizers/>
                                                             <attributedString key="attributedText">
                                                                 <fragment>
                                                                     <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </string>
@@ -58,6 +59,9 @@
                                                                 </fragment>
                                                             </attributedString>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                            <connections>
+                                                                <outletCollection property="gestureRecognizers" destination="6lM-eJ-tgv" appends="YES" id="Bub-dU-fmO"/>
+                                                            </connections>
                                                         </textView>
                                                     </subviews>
                                                     <constraints>
@@ -69,6 +73,7 @@
                                                         <constraint firstItem="5yM-RU-Zqc" firstAttribute="top" secondItem="CUb-W7-WOY" secondAttribute="bottom" constant="8" id="mGq-ua-7eC"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <gestureRecognizers/>
                                                 <connections>
                                                     <outlet property="entryDescription" destination="5yM-RU-Zqc" id="0WH-wA-Gus"/>
                                                     <outlet property="term" destination="CUb-W7-WOY" id="beu-Fo-hRd"/>
@@ -81,12 +86,14 @@
                                         </connections>
                                     </tableView>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="W6Z-Kz-3Q0" firstAttribute="top" secondItem="6bI-LW-c7T" secondAttribute="bottom" constant="8" symbolic="YES" id="o7n-Fw-ZSA"/>
                                 </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W6Z-Kz-3Q0" secondAttribute="bottom" id="0F3-1g-Ntd"/>
                             <constraint firstItem="W6Z-Kz-3Q0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="F8P-up-maI"/>
@@ -101,6 +108,12 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="6lM-eJ-tgv">
+                    <connections>
+                        <action selector="textTapped:" destination="BYZ-38-t0r" id="8Rw-au-Dbh"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="pqK-rL-V8B"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-55.200000000000003" y="67.916041979010501"/>
         </scene>
