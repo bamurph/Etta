@@ -14,10 +14,11 @@ class EttaResultTableViewCell: UITableViewCell {
     @IBOutlet weak var term: UILabel!
     @IBOutlet weak var entryDescription: UITextView!
 
+    @IBOutlet weak var linksList: UILabel!
 
 
     var links: [String] = []
-    var delegate: LinkSearchDelegate?
+
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -48,9 +49,6 @@ class EttaResultTableViewCell: UITableViewCell {
         entryDescription.attributedText = mutableText
     }
 
-    func searchFor(_ term: String) {
-        delegate?.searchFor(term)
-    }
 
    }
 

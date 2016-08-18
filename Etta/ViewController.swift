@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchBox: UITextField!
     @IBOutlet weak var resultTableView: UITableView!
 
+
     var entries: [HTMLDictionaryEntry] = []
 
     override func viewDidLoad() {
@@ -52,6 +53,10 @@ class ViewController: UIViewController {
         }
     }
 
+    /// When the text view is tapped determine if the tap hit a link.
+    /// If so, perform a search using that term.
+    ///
+    /// - parameter sender: the textview tapped.
     @IBAction func textTapped(_ sender: UITapGestureRecognizer) {
         print("Tap!")
         guard let textView = (sender.view as? UITextView) else {
@@ -63,26 +68,29 @@ class ViewController: UIViewController {
         location.x -= textView.textContainerInset.left
         location.y -= textView.textContainerInset.top
 
-        var charIndex = layoutManager.characterIndex(for: location, in: textView.textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
+        let charIndex = layoutManager.characterIndex(for: location, in: textView.textContainer, fractionOfDistanceBetweenInsertionPoints: nil)
 
         guard charIndex < textView.textStorage.length else {
             return
         }
-        print(charIndex)
 
         var range = NSRange(location: 0, length: 0)
 
-        guard let stringVal = textView.attributedText?.attribute("SearchText", at: charIndex, effectiveRange: &range) as? NSString else {
+        guard (textView.attributedText?.attribute("SearchText", at: charIndex, effectiveRange: &range) as? NSString) != nil else {
             return
         }
 
-        let tappedPhrase = (textView.attributedText.string as NSString).substring(with: range)
-        var mutableText = textView.attributedText.mutableCopy() as! NSMutableAttributedString
-        mutableText.addAttributes([NSForegroundColorAttributeName: UIColor.red], range: range)
-        textView.attributedText = mutableText
+        let tappedTerm = (textView.attributedText.string as NSString).substring(with: range)
+
+        search(tappedTerm)
     }
 
+    func search(_ term: String) {
+        searchBox.text = term
+        searchChanged(searchBox)
     }
+
+}
 
 
 
@@ -100,19 +108,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EttaResultCell", for: indexPath) as! EttaResultTableViewCell
         cell.term.text = entries[indexPath.item].termText()
         cell.links = entries[indexPath.item].linkedText()
+        cell.linksList.text = cell.links.joined(separator: ", ") 
         cell.entryDescription.text = entries[indexPath.item].descriptionText()
-        cell.delegate = self
         cell.addLinksToEntryDescription()
         return cell
 
     }
 }
 
-extension ViewController: LinkSearchDelegate {
-    func searchFor(_ term: String) {
-        searchBox.text = term
-        searchChanged(searchBox)
-    }
-}
+
 
 
