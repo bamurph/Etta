@@ -16,6 +16,13 @@ struct HTMLDictionaryEntry {
     func linkedText() -> [String] {
         return description.nodes(matchingSelector: "a").map { $0.textContent}
     }
+    func termText() -> String {
+        return term.textContent
+    }
+
+    func descriptionText() -> String {
+        return description.textContent
+    }
 }
 
 

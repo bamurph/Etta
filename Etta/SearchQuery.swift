@@ -8,6 +8,7 @@
 
 /// A basic search query - init with a search term
 struct SearchQuery: SearchProtocol {
+
     let term: String
     var result: String? = nil
 
@@ -15,4 +16,6 @@ struct SearchQuery: SearchProtocol {
         self.term = term
         self.result = nil
     }
+
+    
 }
