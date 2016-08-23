@@ -36,7 +36,7 @@ extension NSString {
         let stringRange = NSMakeRange(foundRange.location + offset, foundRange.length)
         return newText.ranges(matching: string,
                               collection: collection + [(stringRange, string)],
-                              offset: foundRange.location + foundRange.length)
+                              offset: offset + foundRange.location + foundRange.length)
     }
 
     func rangesMatching(_ strings: [String]) -> [(NSRange, String)] {

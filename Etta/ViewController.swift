@@ -14,9 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var searchBox: UITextField!
     @IBOutlet weak var resultTableView: UITableView!
 
-
     var entries: [HTMLDictionaryEntry] = []
 
+    // MARK: - VC Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
@@ -27,12 +27,20 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // MARK: - Methods
     func configureTableView() {
         resultTableView.estimatedRowHeight = 150
         resultTableView.rowHeight = UITableViewAutomaticDimension
     }
 
-    // MARK:  Actions
+
+    func search(_ term: String) {
+        searchBox.text = term
+        searchChanged(searchBox)
+    }
+
+
+    // MARK: - Actions
     @IBAction func searchChanged(_ sender: UITextField) {
         guard sender.text != nil else {
             return
@@ -45,7 +53,7 @@ class ViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.entries = Parser(rawContent: response!).parsedContent()
                     self.resultTableView.reloadData()
-                    print(self.entries.count)
+    
                 }
             }
         } catch let error {
@@ -58,7 +66,6 @@ class ViewController: UIViewController {
     ///
     /// - parameter sender: the textview tapped.
     @IBAction func textTapped(_ sender: UITapGestureRecognizer) {
-        print("Tap!")
         guard let textView = (sender.view as? UITextView) else {
             return
         }
@@ -85,13 +92,8 @@ class ViewController: UIViewController {
         search(tappedTerm)
     }
 
-    func search(_ term: String) {
-        searchBox.text = term
-        searchChanged(searchBox)
-    }
 
 }
-
 
 
 // MARK: - Table View Protocol Conformance
@@ -106,15 +108,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EttaResultCell", for: indexPath) as! EttaResultTableViewCell
-        cell.term.text = entries[indexPath.item].termText()
-        cell.links = entries[indexPath.item].linkedText()
-        cell.linksList.text = cell.links.joined(separator: ", ") 
-        cell.entryDescription.text = entries[indexPath.item].descriptionText()
-        cell.addLinksToEntryDescription()
-        return cell
+        let entry = entries[indexPath.item]
+        cell.term.text = entry.termText()
+        cell.links = entry.linkedText()
+        cell.linksList.text = cell.links.joined(separator: ", ")
+        cell.entryDescription.attributedText = entry.descriptionWithLinks()
 
+        /// Add gesture recognizer
+        let tapEvent = UITapGestureRecognizer(target: self, action: #selector(ViewController.textTapped(_:)))
+        cell.entryDescription.addGestureRecognizer(tapEvent)
+        return cell
     }
 }
+
 
 
 
