@@ -33,6 +33,7 @@ class ViewController: UIViewController {
         resultTableView.rowHeight = UITableViewAutomaticDimension
     }
 
+
     func search(_ term: String) {
         searchBox.text = term
         searchChanged(searchBox)
@@ -95,7 +96,6 @@ class ViewController: UIViewController {
 }
 
 
-
 // MARK: - Table View Protocol Conformance
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
 
@@ -113,9 +113,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.links = entry.linkedText()
         cell.linksList.text = cell.links.joined(separator: ", ")
         cell.entryDescription.attributedText = entry.descriptionWithLinks()
+
+        /// Add gesture recognizer
+        let tapEvent = UITapGestureRecognizer(target: self, action: #selector(ViewController.textTapped(_:)))
+        cell.entryDescription.addGestureRecognizer(tapEvent)
         return cell
     }
 }
+
 
 
 
