@@ -112,8 +112,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.term.text = entry.termText()
         cell.links = entry.linkedText()
         cell.linksList.text = cell.links.joined(separator: ", ")
-        let ranges = entry.ranges()
-        cell.rangeCount.text = String(entry.ranges().count)
         cell.entryDescription.attributedText = entry.descriptionWithLinks()
         return cell
     }

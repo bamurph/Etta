@@ -68,11 +68,6 @@
                                                                 <outletCollection property="gestureRecognizers" destination="6lM-eJ-tgv" appends="YES" id="Bub-dU-fmO"/>
                                                             </connections>
                                                         </textView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N9G-qn-kPe">
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="5yM-RU-Zqc" firstAttribute="leading" secondItem="0H9-kD-Uxn" secondAttribute="leading" id="1Qp-ii-gOB"/>
@@ -80,9 +75,7 @@
                                                         <constraint firstItem="0H9-kD-Uxn" firstAttribute="top" secondItem="CUb-W7-WOY" secondAttribute="bottom" constant="7.6666666666666714" id="53I-Lc-iaN"/>
                                                         <constraint firstItem="CUb-W7-WOY" firstAttribute="top" secondItem="Goh-Mw-32n" secondAttribute="topMargin" constant="3" id="65W-9e-fCc"/>
                                                         <constraint firstItem="5yM-RU-Zqc" firstAttribute="leading" secondItem="CUb-W7-WOY" secondAttribute="leading" id="6A7-tO-tkx"/>
-                                                        <constraint firstAttribute="trailingMargin" secondItem="N9G-qn-kPe" secondAttribute="trailing" id="DjP-Cr-VFf"/>
                                                         <constraint firstItem="0H9-kD-Uxn" firstAttribute="leading" secondItem="CUb-W7-WOY" secondAttribute="leading" id="SKN-eY-sWt"/>
-                                                        <constraint firstItem="N9G-qn-kPe" firstAttribute="centerY" secondItem="0H9-kD-Uxn" secondAttribute="centerY" id="SZo-4E-b8q"/>
                                                         <constraint firstAttribute="leadingMargin" secondItem="CUb-W7-WOY" secondAttribute="leading" id="UyW-BF-ztF"/>
                                                         <constraint firstItem="5yM-RU-Zqc" firstAttribute="top" secondItem="0H9-kD-Uxn" secondAttribute="bottom" constant="8" id="ezf-d9-w3z"/>
                                                         <constraint firstAttribute="trailingMargin" secondItem="5yM-RU-Zqc" secondAttribute="trailing" id="fQa-F9-Llf"/>
@@ -92,7 +85,6 @@
                                                 <connections>
                                                     <outlet property="entryDescription" destination="5yM-RU-Zqc" id="0WH-wA-Gus"/>
                                                     <outlet property="linksList" destination="0H9-kD-Uxn" id="Rnc-CU-Iu4"/>
-                                                    <outlet property="rangeCount" destination="N9G-qn-kPe" id="8pB-pA-fOj"/>
                                                     <outlet property="term" destination="CUb-W7-WOY" id="beu-Fo-hRd"/>
                                                 </connections>
                                             </tableViewCell>
