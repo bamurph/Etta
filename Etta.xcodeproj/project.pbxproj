@@ -11,7 +11,7 @@
 		9262503F3DD1E3415EFE6806 /* Pods_EttaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3967641622C8DC941CC45FDE /* Pods_EttaUITests.framework */; };
 		A893C58F7724214CFEE6D496 /* Pods_Etta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F473F2C00D197CFF459483 /* Pods_Etta.framework */; };
 		B552743E1D56726C00932E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552743D1D56726C00932E30 /* AppDelegate.swift */; };
-		B55274401D56726C00932E30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552743F1D56726C00932E30 /* ViewController.swift */; };
+		B55274401D56726C00932E30 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552743F1D56726C00932E30 /* SearchViewController.swift */; };
 		B55274431D56726C00932E30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55274411D56726C00932E30 /* Main.storyboard */; };
 		B55274461D56726C00932E30 /* Etta.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B55274441D56726C00932E30 /* Etta.xcdatamodeld */; };
 		B55274481D56726C00932E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B55274471D56726C00932E30 /* Assets.xcassets */; };
@@ -55,7 +55,7 @@
 		B2F473F2C00D197CFF459483 /* Pods_Etta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Etta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B552743A1D56726C00932E30 /* Etta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Etta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B552743D1D56726C00932E30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Etta/AppDelegate.swift; sourceTree = "<group>"; };
-		B552743F1D56726C00932E30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Etta/ViewController.swift; sourceTree = "<group>"; };
+		B552743F1D56726C00932E30 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Etta/SearchViewController.swift; sourceTree = "<group>"; };
 		B55274421D56726C00932E30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B55274451D56726C00932E30 /* Etta.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Etta.xcdatamodel; sourceTree = "<group>"; };
 		B55274471D56726C00932E30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Etta/Assets.xcassets; sourceTree = "<group>"; };
@@ -219,7 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				B552743D1D56726C00932E30 /* AppDelegate.swift */,
-				B552743F1D56726C00932E30 /* ViewController.swift */,
+				B552743F1D56726C00932E30 /* SearchViewController.swift */,
 				B55274491D56726C00932E30 /* LaunchScreen.storyboard */,
 				B55274411D56726C00932E30 /* Main.storyboard */,
 			);
@@ -508,7 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B55274401D56726C00932E30 /* ViewController.swift in Sources */,
+				B55274401D56726C00932E30 /* SearchViewController.swift in Sources */,
 				B596CD0C1D5DD603009CEBA9 /* DictionaryEntry.swift in Sources */,
 				B566EBA01D5B9AF6007ECCA1 /* ParserProtocol.swift in Sources */,
 				B552746F1D56762E00932E30 /* Config.swift in Sources */,

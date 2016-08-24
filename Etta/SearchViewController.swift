@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SearchViewController.swift
 //  Etta
 //
 //  Created by Ben Murphy on 8/6/16.
@@ -9,7 +9,7 @@
 import UIKit
 import HTMLReader
 
-class ViewController: UIViewController {
+class SearchViewController: UIViewController {
     
     @IBOutlet weak var searchBox: UITextField!
     @IBOutlet weak var resultTableView: UITableView!
