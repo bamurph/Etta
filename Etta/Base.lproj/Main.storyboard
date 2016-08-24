@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Etta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="Etta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -103,15 +103,27 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W6Z-Kz-3Q0" secondAttribute="bottom" id="0F3-1g-Ntd"/>
+                            <constraint firstItem="6bI-LW-c7T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="DbA-Ha-wDa"/>
                             <constraint firstItem="W6Z-Kz-3Q0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="F8P-up-maI"/>
+                            <constraint firstItem="L0f-mL-f8o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="KSz-tz-IGr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="W6Z-Kz-3Q0" secondAttribute="trailing" constant="12" id="PrZ-5B-IDQ"/>
-                            <constraint firstItem="6bI-LW-c7T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="iOj-Pw-dMB"/>
+                            <constraint firstItem="L0f-mL-f8o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cjc-XY-zqr"/>
                             <constraint firstItem="L0f-mL-f8o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o0L-em-tm3"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0F3-1g-Ntd"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="resultTableView" destination="W6Z-Kz-3Q0" id="T9M-Eh-eUH"/>
                         <outlet property="searchBox" destination="6bI-LW-c7T" id="8Sg-2E-0LY"/>
+                        <outlet property="searchBoxHeightConstraint" destination="ScO-Jv-Dlv" id="SG1-ia-5Rn"/>
+                        <outlet property="searchBoxTopConstraint" destination="DbA-Ha-wDa" id="RCF-0F-cGb"/>
+                        <outlet property="searchToResultsSpacingConstraint" destination="o7n-Fw-ZSA" id="nz8-Gp-1it"/>
+                        <outlet property="stackView" destination="L0f-mL-f8o" id="afq-cT-9F1"/>
+                        <outlet property="stackViewCenterVConstraint" destination="cjc-XY-zqr" id="Mx8-hy-QJj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

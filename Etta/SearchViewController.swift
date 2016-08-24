@@ -10,16 +10,24 @@ import UIKit
 import HTMLReader
 
 class SearchViewController: UIViewController {
-    
+
+    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var searchBox: UITextField!
     @IBOutlet weak var resultTableView: UITableView!
+    @IBOutlet weak var searchToResultsSpacingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var searchBoxHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var stackViewCenterVConstraint: NSLayoutConstraint!
+    @IBOutlet weak var searchBoxTopConstraint: NSLayoutConstraint!
 
     var entries: [HTMLDictionaryEntry] = []
 
     // MARK: - VC Lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        observeKeyboard()
+        positionSearchInCenter()
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,7 +61,7 @@ class SearchViewController: UIViewController {
                 DispatchQueue.main.async {
                     self.entries = Parser(rawContent: response!).parsedContent()
                     self.resultTableView.reloadData()
-    
+
                 }
             }
         } catch let error {
@@ -97,7 +105,7 @@ class SearchViewController: UIViewController {
 
 
 // MARK: - Table View Protocol Conformance
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -115,11 +123,49 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         cell.entryDescription.attributedText = entry.descriptionWithLinks()
 
         /// Add gesture recognizer
-        let tapEvent = UITapGestureRecognizer(target: self, action: #selector(ViewController.textTapped(_:)))
+        let tapEvent = UITapGestureRecognizer(target: self, action: #selector(SearchViewController.textTapped(_:)))
         cell.entryDescription.addGestureRecognizer(tapEvent)
         return cell
     }
 }
+
+// MARK: - Animations
+extension SearchViewController {
+
+    func positionSearchInCenter() {
+        searchBoxTopConstraint.constant = view.frame.midY - searchBoxHeightConstraint.constant
+
+        UIView.animate(withDuration: 0.0) {
+            self.view.layoutIfNeeded()
+        }
+    }
+
+    func pushSearchToTop() {
+        searchBoxTopConstraint.constant = 8.0
+
+        UIView.animate(withDuration: 0.5) {
+            self.view.layoutIfNeeded()
+        }
+    }
+
+
+
+    func observeKeyboard() {
+        NotificationCenter.default.addObserver(self, selector: #selector(SearchViewController.keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(SearchViewController.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+
+
+    func keyboardWillShow(notification: NSNotification) {
+        pushSearchToTop()
+    }
+
+
+    func keyboardWillHide(notification: NSNotification) {
+    }
+}
+
 
 
 
