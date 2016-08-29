@@ -21,6 +21,8 @@ class SearchViewController: UIViewController {
 
     var entries: [HTMLDictionaryEntry] = []
 
+    var coreDataController: CoreDataController!
+
     // MARK: - VC Lifecycle
 
     override func viewDidLoad() {
