@@ -16,6 +16,7 @@ struct SearchQuery: SearchProtocol {
         self.term = term
         self.result = nil
     }
+    
 
     
 }

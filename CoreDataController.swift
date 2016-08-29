@@ -55,4 +55,29 @@ class CoreDataController {
         }
     }
 
+    /// Save record of a search query
+    ///
+    /// - parameter query: the search query (completed) to save
+    func saveRecord(of query: SearchQuery) {
+        // Create and save a record with CD
+        let record = Record(context: persistentContainer.viewContext)
+        record.result = query.result
+        record.term = query.term
+        record.created = NSDate.init()
+        saveContext()
+    }
+
+    // MARK: - Core Data Fetching 
+
+    func findRecords() throws -> [Record] {
+        let request: NSFetchRequest<Record> = Record.fetchRequest()
+        do {
+            let searchResults = try persistentContainer.viewContext.fetch(request)
+            return searchResults
+        } catch {
+            print("Error with request: \(error)")
+            throw error
+        }
+    }
 }
+

@@ -30,6 +30,16 @@ class SearchViewController: UIViewController {
         configureTableView()
         observeKeyboard()
         positionSearchInCenter()
+        let a = allRecords()
+        a.forEach {
+            print("~ ", $0.term)
+            if $0.result != nil {
+                let entries = Parser(rawContent: $0.result!).parsedContent()
+                entries.forEach {
+                    print("~ ",$0.descriptionText())
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,21 +59,40 @@ class SearchViewController: UIViewController {
         searchChanged(searchBox)
     }
 
+    func allRecords() -> [Record] {
+        do {
+            let records = try coreDataController.findRecords()
+            return records
+        } catch {
+            print(error)
+            return []
+        }
+    }
+
+
 
     // MARK: - Actions
     @IBAction func searchChanged(_ sender: UITextField) {
+
         guard sender.text != nil else {
             return
         }
 
-        let query = SearchQuery(term: sender.text!)
+        var query = SearchQuery(term: sender.text!)
+
 
         do {
             try query.search { (response) in
+                guard response != nil else { return }
                 DispatchQueue.main.async {
                     self.entries = Parser(rawContent: response!).parsedContent()
-                    self.resultTableView.reloadData()
 
+                    /// If the returned content parses into one or more entries then save the record for future use
+                    if self.entries.count != 0 {
+                    self.resultTableView.reloadData()
+                        query.result = response
+                        self.coreDataController.saveRecord(of: query)
+                    }
                 }
             }
         } catch let error {
