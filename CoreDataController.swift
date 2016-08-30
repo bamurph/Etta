@@ -62,7 +62,7 @@ class CoreDataController {
         // Create and save a record with CD
         let record = Record(context: persistentContainer.viewContext)
         record.result = query.result
-        record.term = query.term
+        record.term = query.term.trim()
         record.created = NSDate.init()
         saveContext()
     }

@@ -21,7 +21,7 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
 
     var entries: [HTMLDictionaryEntry] = [] {
         didSet {
-            self.resultTableView.reloadData()
+            resultTableView.reloadData()
         }
     }
 
@@ -46,6 +46,7 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
 
     // MARK: - Methods
     func configureTableView() {
+        resultTableView.dataSource = self
         resultTableView.estimatedRowHeight = 150
         resultTableView.rowHeight = UITableViewAutomaticDimension
     }
@@ -60,7 +61,7 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
     // MARK: - Actions
     @IBAction func searchChanged(_ sender: UITextField) {
 
-        guard let term = sender.text  else {
+        guard let term = sender.text?.trim()  else {
             return
         }
         searchController.lookUp(term)

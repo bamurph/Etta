@@ -44,7 +44,12 @@ extension NSString {
             .flatMap { self.ranges(matching: $0)}
             .reduce([], +)
     }
-    
+}
+
+extension String {
+    func trim() -> String {
+        return self.trimmingCharacters(in: NSCharacterSet.whitespaces)
+    }
 }
 
 
