@@ -9,7 +9,7 @@
 import UIKit
 import HTMLReader
 
-class SearchViewController: UIViewController {
+class SearchViewController: UIViewController, SearchControllerDelegate {
 
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var searchBox: UITextField!
@@ -19,9 +19,14 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var stackViewCenterVConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchBoxTopConstraint: NSLayoutConstraint!
 
-    var entries: [HTMLDictionaryEntry] = []
+    var entries: [HTMLDictionaryEntry] = [] {
+        didSet {
+            self.resultTableView.reloadData()
+        }
+    }
 
     var coreDataController: CoreDataController!
+    var searchController = SearchController()
 
     // MARK: - VC Lifecycle
 
@@ -30,16 +35,8 @@ class SearchViewController: UIViewController {
         configureTableView()
         observeKeyboard()
         positionSearchInCenter()
-        let a = allRecords()
-        a.forEach {
-            print("~ ", $0.term)
-            if $0.result != nil {
-                let entries = Parser(rawContent: $0.result!).parsedContent()
-                entries.forEach {
-                    print("~ ",$0.descriptionText())
-                }
-            }
-        }
+        searchController.delegate = self
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,45 +56,14 @@ class SearchViewController: UIViewController {
         searchChanged(searchBox)
     }
 
-    func allRecords() -> [Record] {
-        do {
-            let records = try coreDataController.findRecords()
-            return records
-        } catch {
-            print(error)
-            return []
-        }
-    }
-
-
 
     // MARK: - Actions
     @IBAction func searchChanged(_ sender: UITextField) {
 
-        guard sender.text != nil else {
+        guard let term = sender.text  else {
             return
         }
-
-        var query = SearchQuery(term: sender.text!)
-
-
-        do {
-            try query.search { (response) in
-                guard response != nil else { return }
-                DispatchQueue.main.async {
-                    self.entries = Parser(rawContent: response!).parsedContent()
-
-                    /// If the returned content parses into one or more entries then save the record for future use
-                    if self.entries.count != 0 {
-                    self.resultTableView.reloadData()
-                        query.result = response
-                        self.coreDataController.saveRecord(of: query)
-                    }
-                }
-            }
-        } catch let error {
-            print(error)
-        }
+        searchController.search(term)
     }
 
     /// When the text view is tapped determine if the tap hit a link.

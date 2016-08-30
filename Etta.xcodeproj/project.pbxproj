@@ -11,6 +11,8 @@
 		9262503F3DD1E3415EFE6806 /* Pods_EttaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3967641622C8DC941CC45FDE /* Pods_EttaUITests.framework */; };
 		A893C58F7724214CFEE6D496 /* Pods_Etta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F473F2C00D197CFF459483 /* Pods_Etta.framework */; };
 		B52C69FD1D74B576002D9480 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52C69FC1D74B576002D9480 /* CoreDataController.swift */; };
+		B5381EA51D75F3DC00CEB77F /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5381EA41D75F3DC00CEB77F /* SearchController.swift */; };
+		B5381EA71D75F43900CEB77F /* SearchControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5381EA61D75F43900CEB77F /* SearchControllerDelegate.swift */; };
 		B552743E1D56726C00932E30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552743D1D56726C00932E30 /* AppDelegate.swift */; };
 		B55274401D56726C00932E30 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552743F1D56726C00932E30 /* SearchViewController.swift */; };
 		B55274431D56726C00932E30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B55274411D56726C00932E30 /* Main.storyboard */; };
@@ -55,6 +57,8 @@
 		A506C4E50F8009EF5D7182CA /* Pods-EttaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EttaUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EttaUITests/Pods-EttaUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B2F473F2C00D197CFF459483 /* Pods_Etta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Etta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52C69FC1D74B576002D9480 /* CoreDataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
+		B5381EA41D75F3DC00CEB77F /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		B5381EA61D75F43900CEB77F /* SearchControllerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchControllerDelegate.swift; sourceTree = "<group>"; };
 		B552743A1D56726C00932E30 /* Etta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Etta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B552743D1D56726C00932E30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Etta/AppDelegate.swift; sourceTree = "<group>"; };
 		B552743F1D56726C00932E30 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Etta/SearchViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 			children = (
 				B52C69FC1D74B576002D9480 /* CoreDataController.swift */,
 				B552743F1D56726C00932E30 /* SearchViewController.swift */,
+				B5381EA41D75F3DC00CEB77F /* SearchController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 		B566EBA51D5BA1DE007ECCA1 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				B5381EA61D75F43900CEB77F /* SearchControllerDelegate.swift */,
 				B566EB9F1D5B9AF6007ECCA1 /* ParserProtocol.swift */,
 				B55274701D567D8E00932E30 /* SearchProtocol.swift */,
 			);
@@ -514,6 +520,7 @@
 				B55274401D56726C00932E30 /* SearchViewController.swift in Sources */,
 				B596CD0C1D5DD603009CEBA9 /* DictionaryEntry.swift in Sources */,
 				B566EBA01D5B9AF6007ECCA1 /* ParserProtocol.swift in Sources */,
+				B5381EA51D75F3DC00CEB77F /* SearchController.swift in Sources */,
 				B552746F1D56762E00932E30 /* Config.swift in Sources */,
 				B57E3BE81D6248D8007ECA27 /* EttaResultTableViewCell.swift in Sources */,
 				B55274711D567D8E00932E30 /* SearchProtocol.swift in Sources */,
@@ -521,6 +528,7 @@
 				B566EBA41D5BA1C3007ECCA1 /* Parser.swift in Sources */,
 				B52C69FD1D74B576002D9480 /* CoreDataController.swift in Sources */,
 				B596CD031D5CFA7C009CEBA9 /* Errors.swift in Sources */,
+				B5381EA71D75F43900CEB77F /* SearchControllerDelegate.swift in Sources */,
 				B55274461D56726C00932E30 /* Etta.xcdatamodeld in Sources */,
 				B566EBA21D5BA1A1007ECCA1 /* SearchQuery.swift in Sources */,
 				B552743E1D56726C00932E30 /* AppDelegate.swift in Sources */,
