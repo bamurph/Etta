@@ -50,6 +50,9 @@
                             <constraint firstItem="L0f-mL-f8o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o0L-em-tm3"/>
                             <constraint firstAttribute="trailingMargin" secondItem="dEC-A1-oo1" secondAttribute="trailing" constant="12" id="tV4-dO-TbU"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="meR-aU-5d9" appends="YES" id="jMI-DY-Fj2"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="dEC-A1-oo1" id="laE-Bq-OY4"/>
@@ -62,6 +65,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="meR-aU-5d9">
+                    <connections>
+                        <action selector="swipeRight:" destination="BYZ-38-t0r" id="hUk-d0-JaI"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="iAq-kV-KsY">
+                    <connections>
+                        <action selector="swipeLeft:" destination="BYZ-38-t0r" id="Ysb-3f-YKc"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-127" y="-93"/>
         </scene>
@@ -144,7 +157,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUD-6c-yO2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-127" y="564"/>
+            <point key="canvasLocation" x="-476" y="564"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="olM-Gp-yfu">
+            <objects>
+                <viewController storyboardIdentifier="HistoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jX7-St-Vjp" customClass="HistoryViewController" customModule="Etta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nop-MQ-gyg"/>
+                        <viewControllerLayoutGuide type="bottom" id="zDt-sU-3sf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="r0l-Ti-QRp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.043137254899999998" green="0.37254901959999998" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LiL-oj-qaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="239" y="564"/>
         </scene>
     </scenes>
 </document>

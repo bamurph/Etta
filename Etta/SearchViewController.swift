@@ -19,7 +19,9 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
     @IBOutlet weak var stackViewCenterVConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchBoxTopConstraint: NSLayoutConstraint!
 
-    /// Add the resultsViewController from the storyboard as a child view controller
+    var activeContainedVC: UIViewController?
+
+    /// Add the results, history and favs VCs from the storyboard as child view controllers
     lazy var resultsViewController: ResultsViewController = {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         var viewController = storyboard.instantiateViewController(withIdentifier: "ResultsViewController") as! ResultsViewController
@@ -27,6 +29,16 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
         self.addViewControllerAsChildViewController(viewController)
         return viewController
     }()
+
+    lazy var historyViewController: HistoryViewController = {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        var viewController = storyboard.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController
+        self.addViewControllerAsChildViewController(viewController)
+        return viewController
+
+    }()
+
+
 
     var entries: [HTMLDictionaryEntry] = [] {
         didSet {
@@ -46,6 +58,7 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
         positionSearchInCenter()
         configureSearchBox()
         searchController.delegate = self
+        revealContainedVC(resultsViewController)
 
     }
 
@@ -67,6 +80,12 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
 
         // Notify Child View Controller
         viewController.didMove(toParentViewController: self)
+    }
+
+    func revealContainedVC(_ viewController: UIViewController) {
+        containerView.subviews.forEach { $0.isHidden = true }
+        activeContainedVC = viewController
+        activeContainedVC?.view.isHidden = false
     }
 
     // MARK: - Methods
@@ -91,6 +110,19 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
         searchController.lookUp(term)
     }
 
+    @IBAction func swipeRight(_ sender: UISwipeGestureRecognizer) {
+        switch activeContainedVC {
+        case is ResultsViewController:
+            revealContainedVC(historyViewController)
+        default:
+            return
+        }
+    }
+
+    @IBAction func swipeLeft(_ sender: UISwipeGestureRecognizer) {
+    }
+
+    func 
 
 
 }

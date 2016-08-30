@@ -13,3 +13,5 @@ struct Config {
     static let eoURL = "https://ettaserver.herokuapp.com/search/"
     static let fontSize: CGFloat = 18.0
 }
+
+
