@@ -63,7 +63,7 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
         guard let term = sender.text  else {
             return
         }
-        searchController.search(term)
+        searchController.lookUp(term)
     }
 
     /// When the text view is tapped determine if the tap hit a link.

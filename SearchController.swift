@@ -25,6 +25,7 @@ class SearchController {
     }
 
     func recordMatching(_ term: String) -> Record? {
+        print("~ ", queryLog().count, " records found")
         return queryLog().filter { $0.term == term }.first
     }
 
@@ -34,9 +35,11 @@ class SearchController {
     func lookUp(_ term: String) {
         switch recordMatching(term) {
         case let x where x?.result != nil:
+            print("~ Record Match Found for: ", term)
             delegate.entries = Parser(rawContent: x!.result!).parsedContent()
             return
         default:
+            print("~ no record match found, searching for: ", term)
             search(term)
             return
         }
