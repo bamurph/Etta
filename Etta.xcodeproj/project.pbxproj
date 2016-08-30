@@ -689,6 +689,7 @@
 				DEVELOPMENT_TEAM = 97JRRX372K;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = Etta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = constellation.Etta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -705,6 +706,7 @@
 				DEVELOPMENT_TEAM = 97JRRX372K;
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
 				INFOPLIST_FILE = Etta/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = constellation.Etta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
