@@ -33,16 +33,15 @@ class SearchController {
     ///
     /// - parameter term: the term to search for
     func lookUp(_ term: String) {
-        switch recordMatching(term) {
-        case let x where x?.result != nil:
-            print("~ Record Match Found for: ", term)
-            delegate.entries = Parser(rawContent: x!.result!).parsedContent()
-            return
-        default:
-            print("~ no record match found, searching for: ", term)
+        if let record = recordMatching(term) {
+            DispatchQueue.main.async {
+                self.delegate.entries = Parser(rawContent: record.result!).parsedContent()
+            }
+        } else {
             search(term)
             return
         }
+
     }
 
     func search(_ term: String) {
