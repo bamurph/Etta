@@ -45,8 +45,10 @@
                         <constraints>
                             <constraint firstItem="6bI-LW-c7T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="DbA-Ha-wDa"/>
                             <constraint firstItem="L0f-mL-f8o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="KSz-tz-IGr"/>
+                            <constraint firstItem="dEC-A1-oo1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="LZ0-6z-yHg"/>
                             <constraint firstItem="L0f-mL-f8o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cjc-XY-zqr"/>
                             <constraint firstItem="L0f-mL-f8o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o0L-em-tm3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dEC-A1-oo1" secondAttribute="trailing" constant="12" id="tV4-dO-TbU"/>
                         </constraints>
                     </view>
                     <connections>
