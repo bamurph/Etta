@@ -40,7 +40,7 @@ extension SearchProtocol {
 
             /// Guard against missing data or an error
             guard let data = data else {
-                print("No data returned")
+                print("~ No data returned")
                 return
             }
             guard error == nil else {
@@ -48,8 +48,9 @@ extension SearchProtocol {
                 return
             }
 
-            /// Define the response object
+            /// Define the response object & set response property
             let response = String(data: data, encoding: String.Encoding.utf8)
+
             completionHandler(response)
         }
         task.resume()
