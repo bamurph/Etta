@@ -30,6 +30,7 @@
 		B596CD031D5CFA7C009CEBA9 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596CD021D5CFA7C009CEBA9 /* Errors.swift */; };
 		B596CD0C1D5DD603009CEBA9 /* DictionaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596CD0B1D5DD603009CEBA9 /* DictionaryEntry.swift */; };
 		B5D15F4E1D56992C00A0FA03 /* EttaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55274551D56726C00932E30 /* EttaTests.swift */; };
+		B5FDD5301D762234004EBB63 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDD52F1D762234004EBB63 /* ResultsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		B596CD021D5CFA7C009CEBA9 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		B596CD0B1D5DD603009CEBA9 /* DictionaryEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionaryEntry.swift; path = ../DictionaryEntry.swift; sourceTree = "<group>"; };
 		B5FAEEBB1D5A6DF30025C5E8 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		B5FDD52F1D762234004EBB63 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		C62DE18C01052B1165E8B70D /* Pods-Etta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Etta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Etta/Pods-Etta.debug.xcconfig"; sourceTree = "<group>"; };
 		C685D3FEF6137676754DAD35 /* Pods-Etta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Etta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Etta/Pods-Etta.release.xcconfig"; sourceTree = "<group>"; };
 		C7BACA7433420F20789471AE /* Pods-EttaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EttaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EttaUITests/Pods-EttaUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 		B54266951D6649990066E4D5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B5FDD52F1D762234004EBB63 /* ResultsViewController.swift */,
 				B52C69FC1D74B576002D9480 /* CoreDataController.swift */,
 				B552743F1D56726C00932E30 /* SearchViewController.swift */,
 				B5381EA41D75F3DC00CEB77F /* SearchController.swift */,
@@ -524,6 +527,7 @@
 				B552746F1D56762E00932E30 /* Config.swift in Sources */,
 				B57E3BE81D6248D8007ECA27 /* EttaResultTableViewCell.swift in Sources */,
 				B55274711D567D8E00932E30 /* SearchProtocol.swift in Sources */,
+				B5FDD5301D762234004EBB63 /* ResultsViewController.swift in Sources */,
 				B596CD011D5CD6C8009CEBA9 /* Helpers.swift in Sources */,
 				B566EBA41D5BA1C3007ECCA1 /* Parser.swift in Sources */,
 				B52C69FD1D74B576002D9480 /* CoreDataController.swift in Sources */,
