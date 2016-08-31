@@ -19,26 +19,17 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
     @IBOutlet weak var stackViewCenterVConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchBoxTopConstraint: NSLayoutConstraint!
 
-    var activeContainedVC: UIViewController?
 
-    /// Add the results, history and favs VCs from the storyboard as child view controllers
-    lazy var resultsViewController: ResultsViewController = {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        var viewController = storyboard.instantiateViewController(withIdentifier: "ResultsViewController") as! ResultsViewController
-        viewController.delegate = self
-        self.addViewControllerAsChildViewController(viewController)
-        return viewController
-    }()
+//    /// Set up the page view controller and its children -
+//    lazy var pageViewController: PageViewController = {
+//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+//        var viewController = storyboard.instantiateViewController(withIdentifier: "PageViewController") as! PageViewController
+//        return viewController
+//    }()
 
-    lazy var historyViewController: HistoryViewController = {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        var viewController = storyboard.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController
-        self.addViewControllerAsChildViewController(viewController)
-        return viewController
-
-    }()
-
-
+    var containerVC: PageViewController!
+    var resultsViewController: ResultsViewController!
+    var historyViewController: HistoryViewController!
 
     var entries: [HTMLDictionaryEntry] = [] {
         didSet {
@@ -53,12 +44,17 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        containerVC = childViewControllers.first as! PageViewController
+        containerVC.resultsViewController.delegate = self
+        resultsViewController = containerVC.resultsViewController
+        historyViewController = containerVC.historyViewController
 
         observeKeyboard()
-        positionSearchInCenter()
         configureSearchBox()
         searchController.delegate = self
-        revealContainedVC(resultsViewController)
+
+        // Fire this last
+        positionSearchInCenter()
 
     }
 
@@ -67,26 +63,9 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    private func addViewControllerAsChildViewController(_ viewController: UIViewController) {
-        // Add Child View Controller
-        addChildViewController(viewController)
 
-        // Add Child View as Subview
-        containerView.addSubview(viewController.view)
 
-        // Configure Child View
-        viewController.view.frame = view.bounds
-        viewController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
-        // Notify Child View Controller
-        viewController.didMove(toParentViewController: self)
-    }
-
-    func revealContainedVC(_ viewController: UIViewController) {
-        containerView.subviews.forEach { $0.isHidden = true }
-        activeContainedVC = viewController
-        activeContainedVC?.view.isHidden = false
-    }
 
     // MARK: - Methods
 
@@ -109,20 +88,6 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
         }
         searchController.lookUp(term)
     }
-
-    @IBAction func swipeRight(_ sender: UISwipeGestureRecognizer) {
-        switch activeContainedVC {
-        case is ResultsViewController:
-            revealContainedVC(historyViewController)
-        default:
-            return
-        }
-    }
-
-    @IBAction func swipeLeft(_ sender: UISwipeGestureRecognizer) {
-    }
-
-    func 
 
 
 }
