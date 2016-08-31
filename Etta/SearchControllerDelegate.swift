@@ -11,5 +11,5 @@ import Foundation
 protocol SearchControllerDelegate {
     var coreDataController: CoreDataController! { get }
     var entries: [HTMLDictionaryEntry] { get set }
-    
+    func search(_ term: String)
 }

@@ -10,6 +10,8 @@ import UIKit
 
 class HistoryViewController: UIViewController {
 
+    var delegate: SearchControllerDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

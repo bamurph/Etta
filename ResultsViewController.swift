@@ -97,7 +97,7 @@ extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
 
         let tappedTerm = (textView.attributedText.string as NSString).substring(with: range)
         
-        (parent as? SearchViewController)?.search(tappedTerm)
+        delegate.search(tappedTerm)
     }
 
 }

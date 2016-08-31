@@ -35,15 +35,13 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         containerVC = childViewControllers.first as! PageViewController
-        containerVC.resultsViewController.delegate = self
         resultsViewController = containerVC.resultsViewController
         historyViewController = containerVC.historyViewController
-
+        resultsViewController.delegate = self
+        historyViewController.delegate = self
         observeKeyboard()
         configureSearchBox()
         searchController.delegate = self
-
-        // Fire this last
         positionSearchInCenter()
 
     }

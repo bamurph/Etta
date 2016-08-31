@@ -145,6 +145,7 @@
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="vRq-Gq-Bab"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="gCF-4a-Jyt"/>
+                                    <outletCollection property="gestureRecognizers" destination="gJZ-tb-EQ0" appends="YES" id="tqa-bf-0Vu"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -160,6 +161,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUD-6c-yO2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gJZ-tb-EQ0">
+                    <connections>
+                        <action selector="textTapped:" destination="xTV-bF-Xqh" id="eWX-Rd-bdp"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="242" y="-17"/>
         </scene>
