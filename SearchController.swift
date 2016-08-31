@@ -14,19 +14,9 @@ class SearchController {
 
     var delegate: SearchControllerDelegate!
 
-    func queryLog() -> [Record] {
-        do {
-            let records = try delegate.coreDataController.findRecords()
-            return records 
-        } catch {
-            print(error)
-            return []
-        }
-    }
-
     func recordMatching(_ term: String) -> Record? {
-        print("~ ", queryLog().count, " records found")
-        return queryLog().filter { $0.term == term }.first
+
+        return delegate.history().filter { $0.term == term }.first
     }
 
     /// Lookup term in coredata log, if not found perform a search

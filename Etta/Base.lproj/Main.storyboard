@@ -180,8 +180,33 @@
                     <view key="view" contentMode="scaleToFill" id="r0l-Ti-QRp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.043137254899999998" green="0.37254901959999998" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tFr-ud-1xJ">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="g47-sP-L4L">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g47-sP-L4L" id="6Za-FU-McH">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tFr-ud-1xJ" firstAttribute="height" secondItem="r0l-Ti-QRp" secondAttribute="height" id="FqE-Kq-Aee"/>
+                            <constraint firstItem="tFr-ud-1xJ" firstAttribute="centerY" secondItem="r0l-Ti-QRp" secondAttribute="centerY" id="K2n-dZ-Lca"/>
+                            <constraint firstItem="tFr-ud-1xJ" firstAttribute="centerX" secondItem="r0l-Ti-QRp" secondAttribute="centerX" id="gEN-k2-FWE"/>
+                            <constraint firstItem="tFr-ud-1xJ" firstAttribute="width" secondItem="r0l-Ti-QRp" secondAttribute="width" id="xCJ-sF-45y"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="historyTableView" destination="tFr-ud-1xJ" id="3av-xO-FYS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiL-oj-qaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

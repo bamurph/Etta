@@ -14,7 +14,6 @@ class ResultsViewController: UIViewController {
 
     var delegate: SearchControllerDelegate!
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
