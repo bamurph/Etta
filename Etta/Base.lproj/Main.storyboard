@@ -19,55 +19,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="L0f-mL-f8o">
-                                <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="18" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="6bI-LW-c7T">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="34" id="ScO-Jv-Dlv"/>
-                                        </constraints>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
-                                        <connections>
-                                            <action selector="searchChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="c84-UM-i0R"/>
-                                        </connections>
-                                    </textField>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEC-A1-oo1">
-                                        <connections>
-                                            <segue destination="hB9-Ij-2F2" kind="embed" id="p57-n0-7gf"/>
-                                        </connections>
-                                    </containerView>
-                                </subviews>
-                                <gestureRecognizers/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="18" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="6bI-LW-c7T">
                                 <constraints>
-                                    <constraint firstItem="dEC-A1-oo1" firstAttribute="top" secondItem="6bI-LW-c7T" secondAttribute="bottom" constant="8" id="i3W-gV-wRh"/>
+                                    <constraint firstAttribute="height" constant="36" id="ev4-lc-aAB"/>
                                 </constraints>
-                            </stackView>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="searchChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="c84-UM-i0R"/>
+                                </connections>
+                            </textField>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEC-A1-oo1">
+                                <connections>
+                                    <segue destination="hB9-Ij-2F2" kind="embed" id="p57-n0-7gf"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="6bI-LW-c7T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="DbA-Ha-wDa"/>
-                            <constraint firstItem="L0f-mL-f8o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="KSz-tz-IGr"/>
-                            <constraint firstItem="dEC-A1-oo1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="LZ0-6z-yHg"/>
-                            <constraint firstItem="L0f-mL-f8o" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cjc-XY-zqr"/>
-                            <constraint firstItem="L0f-mL-f8o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o0L-em-tm3"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="dEC-A1-oo1" secondAttribute="trailing" constant="12" id="tV4-dO-TbU"/>
+                            <constraint firstItem="dEC-A1-oo1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="2NF-oM-e6X"/>
+                            <constraint firstItem="dEC-A1-oo1" firstAttribute="top" secondItem="6bI-LW-c7T" secondAttribute="bottom" constant="16" id="9LQ-CI-PDU"/>
+                            <constraint firstItem="6bI-LW-c7T" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="Kyc-IJ-s7e"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6bI-LW-c7T" secondAttribute="trailing" constant="12" id="Lou-5n-uWY"/>
+                            <constraint firstAttribute="bottom" secondItem="dEC-A1-oo1" secondAttribute="bottom" constant="20" symbolic="YES" id="j8a-P2-r73"/>
+                            <constraint firstItem="6bI-LW-c7T" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="12" id="n8W-Ri-P5r"/>
+                            <constraint firstItem="dEC-A1-oo1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uw1-aW-8cQ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="dEC-A1-oo1" id="laE-Bq-OY4"/>
-                        <outlet property="searchBox" destination="6bI-LW-c7T" id="8Sg-2E-0LY"/>
-                        <outlet property="searchBoxHeightConstraint" destination="ScO-Jv-Dlv" id="SG1-ia-5Rn"/>
-                        <outlet property="searchBoxTopConstraint" destination="DbA-Ha-wDa" id="RCF-0F-cGb"/>
-                        <outlet property="searchToResultsSpacingConstraint" destination="i3W-gV-wRh" id="AnW-ju-BuU"/>
-                        <outlet property="stackView" destination="L0f-mL-f8o" id="afq-cT-9F1"/>
-                        <outlet property="stackViewCenterVConstraint" destination="cjc-XY-zqr" id="Mx8-hy-QJj"/>
+                        <outlet property="searchBox" destination="6bI-LW-c7T" id="bPn-ia-jxX"/>
+                        <outlet property="searchBoxHeightConstraint" destination="ev4-lc-aAB" id="LAF-UT-MlD"/>
+                        <outlet property="searchBoxTopConstraint" destination="Kyc-IJ-s7e" id="YHs-aH-2oI"/>
+                        <outlet property="searchToResultsSpacingConstraint" destination="ev4-lc-aAB" id="dVs-em-cYd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="126" y="-770"/>
+            <point key="canvasLocation" x="125.59999999999999" y="-770.46476761619192"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="gL4-P0-7aI">
@@ -80,7 +71,7 @@
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gM-4T-12L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="126" y="-84"/>
+            <point key="canvasLocation" x="766" y="-762"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="n3K-lt-6ve">
@@ -91,7 +82,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lG5-ko-fyW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sBA-IY-cLZ">
-                        <rect key="frame" x="0.0" y="0.0" width="319" height="569"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="275" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gl4-eI-LbV">
@@ -165,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bUD-6c-yO2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-255" y="527"/>
+            <point key="canvasLocation" x="242" y="-17"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="olM-Gp-yfu">
@@ -176,14 +167,14 @@
                         <viewControllerLayoutGuide type="bottom" id="zDt-sU-3sf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="r0l-Ti-QRp">
-                        <rect key="frame" x="0.0" y="0.0" width="319" height="569"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.043137254899999998" green="0.37254901959999998" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiL-oj-qaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="494" y="527"/>
+            <point key="canvasLocation" x="956" y="-18"/>
         </scene>
     </scenes>
 </document>

@@ -11,12 +11,10 @@ import HTMLReader
 
 class SearchViewController: UIViewController, SearchControllerDelegate {
 
-    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var searchBox: UITextField!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var searchToResultsSpacingConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchBoxHeightConstraint: NSLayoutConstraint!
-    @IBOutlet weak var stackViewCenterVConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchBoxTopConstraint: NSLayoutConstraint!
 
 
