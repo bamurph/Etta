@@ -16,19 +16,12 @@ class PageViewController: UIPageViewController, UIPageViewControllerDelegate, UI
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.delegate = self
         self.dataSource = self
-
         resultsViewController = storyboard?.instantiateViewController(withIdentifier: "ResultsViewController") as! ResultsViewController!
         historyViewController = storyboard?.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController!
-
-
-        
-
         pages.append(resultsViewController as UIViewController)
         pages.append(historyViewController as UIViewController)
-
         setViewControllers([resultsViewController], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
     }
 

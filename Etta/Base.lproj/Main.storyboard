@@ -85,11 +85,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="275" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gl4-eI-LbV">
-                                <frame key="frameInset" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="275" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gl4-eI-LbV">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="qrj-QL-u9n"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EttaResultCell" rowHeight="275" id="L2Z-qo-ApA" userLabel="EttaResult TVC" customClass="EttaResultTableViewCell" customModule="Etta">
                                         <rect key="frame" x="0.0" y="28" width="375" height="275"/>
@@ -123,15 +124,14 @@
                                                 </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="hG3-Fu-tvR" firstAttribute="top" secondItem="WUB-sO-NNy" secondAttribute="bottom" constant="7.6666666666666714" id="2gz-kV-3gQ"/>
-                                                <constraint firstItem="YkH-Y5-FBC" firstAttribute="leading" secondItem="WUB-sO-NNy" secondAttribute="leading" id="6fx-sE-6yy"/>
-                                                <constraint firstItem="hG3-Fu-tvR" firstAttribute="leading" secondItem="WUB-sO-NNy" secondAttribute="leading" id="Hp7-9a-ntu"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="WUB-sO-NNy" secondAttribute="leading" id="JJL-9o-kKZ"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="YkH-Y5-FBC" secondAttribute="bottom" id="JhZ-zb-Wos"/>
-                                                <constraint firstItem="YkH-Y5-FBC" firstAttribute="top" secondItem="hG3-Fu-tvR" secondAttribute="bottom" constant="8" id="ezr-U3-dRl"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="YkH-Y5-FBC" secondAttribute="trailing" id="mbW-As-1UW"/>
-                                                <constraint firstItem="YkH-Y5-FBC" firstAttribute="leading" secondItem="hG3-Fu-tvR" secondAttribute="leading" id="nTK-8Q-o8F"/>
-                                                <constraint firstItem="WUB-sO-NNy" firstAttribute="top" secondItem="qjp-zv-KLd" secondAttribute="topMargin" constant="3" id="zvH-6k-Glj"/>
+                                                <constraint firstItem="YkH-Y5-FBC" firstAttribute="bottom" secondItem="qjp-zv-KLd" secondAttribute="bottomMargin" id="Khx-D4-J06"/>
+                                                <constraint firstItem="hG3-Fu-tvR" firstAttribute="leading" secondItem="YkH-Y5-FBC" secondAttribute="leading" id="Msl-IY-YjD"/>
+                                                <constraint firstItem="WUB-sO-NNy" firstAttribute="leading" secondItem="qjp-zv-KLd" secondAttribute="leadingMargin" id="QuK-E1-85d"/>
+                                                <constraint firstItem="WUB-sO-NNy" firstAttribute="leading" secondItem="hG3-Fu-tvR" secondAttribute="leading" id="Tdp-yM-vMs"/>
+                                                <constraint firstItem="YkH-Y5-FBC" firstAttribute="top" secondItem="hG3-Fu-tvR" secondAttribute="bottom" constant="8" symbolic="YES" id="ccl-q9-dLS"/>
+                                                <constraint firstItem="YkH-Y5-FBC" firstAttribute="trailing" secondItem="qjp-zv-KLd" secondAttribute="trailingMargin" id="mDu-N2-bKF"/>
+                                                <constraint firstItem="WUB-sO-NNy" firstAttribute="top" secondItem="qjp-zv-KLd" secondAttribute="topMargin" constant="2" id="ou6-rl-3s5"/>
+                                                <constraint firstItem="hG3-Fu-tvR" firstAttribute="top" secondItem="WUB-sO-NNy" secondAttribute="bottom" constant="8" symbolic="YES" id="wEk-Yj-bee"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <gestureRecognizers/>
@@ -149,6 +149,11 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gl4-eI-LbV" firstAttribute="centerX" secondItem="sBA-IY-cLZ" secondAttribute="centerX" id="91R-Zg-DRU"/>
+                            <constraint firstItem="gl4-eI-LbV" firstAttribute="width" secondItem="sBA-IY-cLZ" secondAttribute="width" id="dLe-WI-cap"/>
+                            <constraint firstItem="gl4-eI-LbV" firstAttribute="top" secondItem="mNm-Nu-l2g" secondAttribute="bottom" id="j1h-BL-hqU"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="resultsTableView" destination="gl4-eI-LbV" id="g0r-4j-QPU"/>

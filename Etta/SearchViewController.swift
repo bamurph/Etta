@@ -17,14 +17,6 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
     @IBOutlet weak var searchBoxHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchBoxTopConstraint: NSLayoutConstraint!
 
-
-//    /// Set up the page view controller and its children -
-//    lazy var pageViewController: PageViewController = {
-//        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-//        var viewController = storyboard.instantiateViewController(withIdentifier: "PageViewController") as! PageViewController
-//        return viewController
-//    }()
-
     var containerVC: PageViewController!
     var resultsViewController: ResultsViewController!
     var historyViewController: HistoryViewController!
@@ -61,33 +53,25 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-
-
-
-
     // MARK: - Methods
 
     func configureSearchBox() {
         searchBox.clearButtonMode = .always
     }
 
-
     func search(_ term: String) {
         searchBox.text = term
         searchChanged(searchBox)
     }
 
-
     // MARK: - Actions
     @IBAction func searchChanged(_ sender: UITextField) {
-
         guard let term = sender.text?.trim()  else {
             return
         }
         searchController.lookUp(term)
+        containerVC.setViewControllers([resultsViewController], direction: .forward, animated: true, completion: nil)
     }
-
-
 }
 
 
@@ -111,19 +95,15 @@ extension SearchViewController {
         }
     }
 
-
-
     func observeKeyboard() {
         NotificationCenter.default.addObserver(self, selector: #selector(SearchViewController.keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
 
         NotificationCenter.default.addObserver(self, selector: #selector(SearchViewController.keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
 
-
     func keyboardWillShow(notification: NSNotification) {
         pushSearchToTop()
     }
-
 
     func keyboardWillHide(notification: NSNotification) {
     }
