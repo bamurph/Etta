@@ -30,7 +30,7 @@
 		B596CD031D5CFA7C009CEBA9 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596CD021D5CFA7C009CEBA9 /* Errors.swift */; };
 		B596CD0C1D5DD603009CEBA9 /* DictionaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596CD0B1D5DD603009CEBA9 /* DictionaryEntry.swift */; };
 		B5D15F4E1D56992C00A0FA03 /* EttaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55274551D56726C00932E30 /* EttaTests.swift */; };
-		B5E28C281D7755F6005CC092 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E28C271D7755F6005CC092 /* PageViewController.swift */; };
+		B5EB833B1D789F82005BB6B3 /* EttaPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EB833A1D789F82005BB6B3 /* EttaPageViewController.swift */; };
 		B5FDD5301D762234004EBB63 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDD52F1D762234004EBB63 /* ResultsViewController.swift */; };
 		B5FDD5321D762BF4004EBB63 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDD5311D762BF4004EBB63 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
@@ -86,7 +86,7 @@
 		B596CD001D5CD6C8009CEBA9 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		B596CD021D5CFA7C009CEBA9 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		B596CD0B1D5DD603009CEBA9 /* DictionaryEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionaryEntry.swift; path = ../DictionaryEntry.swift; sourceTree = "<group>"; };
-		B5E28C271D7755F6005CC092 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		B5EB833A1D789F82005BB6B3 /* EttaPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EttaPageViewController.swift; sourceTree = "<group>"; };
 		B5FAEEBB1D5A6DF30025C5E8 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		B5FDD52F1D762234004EBB63 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		B5FDD5311D762BF4004EBB63 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 		B54266951D6649990066E4D5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B5E28C271D7755F6005CC092 /* PageViewController.swift */,
+				B5EB833A1D789F82005BB6B3 /* EttaPageViewController.swift */,
 				B5FDD5311D762BF4004EBB63 /* HistoryViewController.swift */,
 				B5FDD52F1D762234004EBB63 /* ResultsViewController.swift */,
 				B52C69FC1D74B576002D9480 /* CoreDataController.swift */,
@@ -531,6 +531,7 @@
 				B566EBA01D5B9AF6007ECCA1 /* ParserProtocol.swift in Sources */,
 				B5381EA51D75F3DC00CEB77F /* SearchController.swift in Sources */,
 				B552746F1D56762E00932E30 /* Config.swift in Sources */,
+				B5EB833B1D789F82005BB6B3 /* EttaPageViewController.swift in Sources */,
 				B57E3BE81D6248D8007ECA27 /* EttaResultTableViewCell.swift in Sources */,
 				B55274711D567D8E00932E30 /* SearchProtocol.swift in Sources */,
 				B5FDD5301D762234004EBB63 /* ResultsViewController.swift in Sources */,
@@ -541,7 +542,6 @@
 				B5381EA71D75F43900CEB77F /* SearchControllerDelegate.swift in Sources */,
 				B55274461D56726C00932E30 /* Etta.xcdatamodeld in Sources */,
 				B566EBA21D5BA1A1007ECCA1 /* SearchQuery.swift in Sources */,
-				B5E28C281D7755F6005CC092 /* PageViewController.swift in Sources */,
 				B5FDD5321D762BF4004EBB63 /* HistoryViewController.swift in Sources */,
 				B552743E1D56726C00932E30 /* AppDelegate.swift in Sources */,
 			);

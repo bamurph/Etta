@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11198.2" systemVersion="16A313a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RIz-Js-Yh6">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -7,10 +7,18 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Etta Page View Controller-->
+        <scene sceneID="iJ5-c1-G3U">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="RIz-Js-Yh6" customClass="EttaPageViewController" customModule="Etta" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hnU-sf-tKd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-524" y="-916"/>
+        </scene>
         <!--Search View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SearchViewController" customModule="Etta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="BYZ-38-t0r" customClass="SearchViewController" customModule="Etta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -32,7 +40,7 @@
                             </textField>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dEC-A1-oo1">
                                 <connections>
-                                    <segue destination="hB9-Ij-2F2" kind="embed" id="p57-n0-7gf"/>
+                                    <segue destination="xTV-bF-Xqh" kind="embed" identifier="EmbedSegue" id="xNt-pu-QyC"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -58,20 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="125.59999999999999" y="-770.46476761619192"/>
-        </scene>
-        <!--Page View Controller-->
-        <scene sceneID="gL4-P0-7aI">
-            <objects>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="hB9-Ij-2F2" customClass="PageViewController" customModule="Etta" customModuleProvider="target" sceneMemberID="viewController">
-                    <connections>
-                        <segue destination="xTV-bF-Xqh" kind="show" identifier="page1" id="oxM-s0-TdE"/>
-                        <segue destination="jX7-St-Vjp" kind="show" identifier="page2" id="fqi-IU-1YZ"/>
-                    </connections>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7gM-4T-12L" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="766" y="-762"/>
+            <point key="canvasLocation" x="228" y="-895"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="n3K-lt-6ve">
@@ -167,18 +162,18 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="242" y="-17"/>
+            <point key="canvasLocation" x="228" y="-214"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="olM-Gp-yfu">
             <objects>
-                <viewController storyboardIdentifier="HistoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jX7-St-Vjp" customClass="HistoryViewController" customModule="Etta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jX7-St-Vjp" userLabel="History View Controller" customClass="HistoryViewController" customModule="Etta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nop-MQ-gyg"/>
                         <viewControllerLayoutGuide type="bottom" id="zDt-sU-3sf"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="r0l-Ti-QRp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tFr-ud-1xJ">
@@ -219,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LiL-oj-qaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="956" y="-18"/>
+            <point key="canvasLocation" x="-479" y="-170"/>
         </scene>
     </scenes>
 </document>

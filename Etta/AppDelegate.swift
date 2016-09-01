@@ -18,11 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         /// Inject core data controller to root vc
-        guard let rvc = window?.rootViewController as? SearchViewController else {
+        guard let evc = window?.rootViewController as? EttaPageViewController else {
             return false
         }
 
-        rvc.coreDataController = coreDataController
+        evc.coreDataController = coreDataController
 
         return true
     }

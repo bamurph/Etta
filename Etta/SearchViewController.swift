@@ -17,9 +17,10 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
     @IBOutlet weak var searchBoxHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchBoxTopConstraint: NSLayoutConstraint!
 
-    var containerVC: PageViewController!
+
     var resultsViewController: ResultsViewController!
-    var historyViewController: HistoryViewController!
+    var coreDataController: CoreDataController!
+    var searchController = SearchController()
 
     var entries: [HTMLDictionaryEntry] = [] {
         didSet {
@@ -27,21 +28,13 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
         }
     }
 
-    var coreDataController: CoreDataController!
-    var searchController = SearchController()
-
     // MARK: - VC Lifecycle
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        containerVC = childViewControllers.first as! PageViewController
-        resultsViewController = containerVC.resultsViewController
-        historyViewController = containerVC.historyViewController
-        resultsViewController.delegate = self
-        historyViewController.delegate = self
+
+        searchController.delegate = self
         observeKeyboard()
         configureSearchBox()
-        searchController.delegate = self
         positionSearchInCenter()
 
     }
@@ -68,7 +61,16 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
             return
         }
         searchController.lookUp(term)
-        containerVC.setViewControllers([resultsViewController], direction: .forward, animated: true, completion: nil)
+    }
+
+    // MARK: - Segue(s)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc =
+            segue.destination as? ResultsViewController,
+            segue.identifier == "EmbedSegue" {
+            resultsViewController = vc
+            vc.delegate = self
+        }
     }
 }
 

@@ -17,11 +17,15 @@ class HistoryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("~ LOADED HISTORY VC")
-        log = delegate.history()
+        refreshLog()
         historyTableView.delegate = self
         historyTableView.dataSource = self
 
+    }
+
+    func refreshLog() {
+        log = delegate.history()
+        log.reverse()
     }
 
 
