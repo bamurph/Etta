@@ -21,13 +21,21 @@ class EttaPageViewController: UIPageViewController, UIPageViewControllerDelegate
         dataSource = self
 
         /// instantiate view controllers
-        searchViewController = storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController!
-        searchViewController.coreDataController = coreDataController
+        searchViewController = {
+            let svc = storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController!
+            svc?.coreDataController = coreDataController
+            return svc
+        }()
 
-        historyViewController = storyboard?.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController!
+
+        historyViewController = {
+            let hvc = storyboard?.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController!
+            hvc?.delegate = searchViewController
+            return hvc
+        }()
 
 
-
+        /// Add view controllers to pages array and set initial page
         pages = [searchViewController, historyViewController]
         setViewControllers([searchViewController], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
 
@@ -51,6 +59,15 @@ class EttaPageViewController: UIPageViewController, UIPageViewControllerDelegate
 
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return 0
+    }
+
+    func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
+        if pendingViewControllers.first == historyViewController {
+            DispatchQueue.main.async {
+                self.historyViewController.refreshLog()
+                self.historyViewController.historyTableView.reloadData()
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
