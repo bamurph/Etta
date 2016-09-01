@@ -54,7 +54,7 @@ class EttaPageViewController: UIPageViewController, UIPageViewControllerDelegate
     }
 
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return pages.count
+        return 0
     }
 
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {

@@ -10,7 +10,7 @@
         <!--Etta Page View Controller-->
         <scene sceneID="iJ5-c1-G3U">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="RIz-Js-Yh6" customClass="EttaPageViewController" customModule="Etta" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" title="Etta Page View Controller" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="RIz-Js-Yh6" customClass="EttaPageViewController" customModule="Etta" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hnU-sf-tKd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-524" y="-916"/>
