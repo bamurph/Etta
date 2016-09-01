@@ -8,12 +8,49 @@
 
 import UIKit
 
-class EttaPageViewController: UIPageViewController {
+class EttaPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+
+    var pages = [UIViewController]()
+    var searchViewController: SearchViewController!
+    var historyViewController: HistoryViewController!
+    var coreDataController: CoreDataController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        delegate = self
+        dataSource = self
 
-        // Do any additional setup after loading the view.
+        /// instantiate view controllers
+        searchViewController = storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController!
+        searchViewController.coreDataController = coreDataController
+
+        historyViewController = storyboard?.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController!
+
+
+
+        pages = [searchViewController, historyViewController]
+        setViewControllers([searchViewController], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
+
+    }
+
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        let currentIndex = pages.index(of: viewController)!
+        let previousIndex = abs((currentIndex - 1) % pages.count)
+        return pages[previousIndex]
+    }
+
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        let currentIndex = pages.index(of: viewController)!
+        let nextIndex = abs((currentIndex + 1) % pages.count)
+        return pages[nextIndex]
+    }
+
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return pages.count
+    }
+
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        return 0
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +59,8 @@ class EttaPageViewController: UIPageViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+
+
 
 }
