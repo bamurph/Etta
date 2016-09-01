@@ -117,21 +117,36 @@
                                                     </attributedString>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Np4-p6-xga">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                    <state key="normal" title="☆">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="toggleFavorite:" destination="L2Z-qo-ApA" eventType="touchUpInside" id="KDg-XZ-gw5"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Np4-p6-xga" secondAttribute="trailing" id="0Yf-di-gsu"/>
                                                 <constraint firstItem="YkH-Y5-FBC" firstAttribute="bottom" secondItem="qjp-zv-KLd" secondAttribute="bottomMargin" id="Khx-D4-J06"/>
                                                 <constraint firstItem="hG3-Fu-tvR" firstAttribute="leading" secondItem="YkH-Y5-FBC" secondAttribute="leading" id="Msl-IY-YjD"/>
                                                 <constraint firstItem="WUB-sO-NNy" firstAttribute="leading" secondItem="qjp-zv-KLd" secondAttribute="leadingMargin" id="QuK-E1-85d"/>
                                                 <constraint firstItem="WUB-sO-NNy" firstAttribute="leading" secondItem="hG3-Fu-tvR" secondAttribute="leading" id="Tdp-yM-vMs"/>
                                                 <constraint firstItem="YkH-Y5-FBC" firstAttribute="top" secondItem="hG3-Fu-tvR" secondAttribute="bottom" constant="8" symbolic="YES" id="ccl-q9-dLS"/>
+                                                <constraint firstItem="Np4-p6-xga" firstAttribute="baseline" secondItem="WUB-sO-NNy" secondAttribute="baseline" id="gCy-Ab-2Js"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="YkH-Y5-FBC" secondAttribute="trailing" id="mDu-N2-bKF"/>
                                                 <constraint firstItem="WUB-sO-NNy" firstAttribute="top" secondItem="qjp-zv-KLd" secondAttribute="topMargin" constant="2" id="ou6-rl-3s5"/>
                                                 <constraint firstItem="hG3-Fu-tvR" firstAttribute="top" secondItem="WUB-sO-NNy" secondAttribute="bottom" constant="8" symbolic="YES" id="wEk-Yj-bee"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <gestureRecognizers/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="keyPath" value=""/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <outlet property="entryDescription" destination="YkH-Y5-FBC" id="WaC-jW-20A"/>
+                                            <outlet property="favoriteButton" destination="Np4-p6-xga" id="JmL-Fp-G90"/>
                                             <outlet property="linksList" destination="hG3-Fu-tvR" id="4HT-1N-Wua"/>
                                             <outlet property="term" destination="WUB-sO-NNy" id="AcQ-16-ZDd"/>
                                         </connections>

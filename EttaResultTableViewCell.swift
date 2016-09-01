@@ -14,13 +14,15 @@ class EttaResultTableViewCell: UITableViewCell {
     @IBOutlet weak var term: UILabel!
     @IBOutlet weak var entryDescription: UITextView!
     @IBOutlet weak var linksList: UILabel!
-
+    @IBOutlet weak var favoriteButton: UIButton!
 
     var links: [String] = []
 
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        favoriteButton.setTitle(Config.favoriteStar[0], for: .normal)
+        favoriteButton.setTitle(Config.favoriteStar[1], for: .selected)
         // Initialization code
     }
 
@@ -31,5 +33,15 @@ class EttaResultTableViewCell: UITableViewCell {
     }
 
 
-}
 
+
+    @IBAction func toggleFavorite(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        switch sender.isSelected {
+        case true:
+            print("~ \(term) is favorited!")
+        default:
+            print("~ \(term) is not favorited!")
+        }
+    }
+}
