@@ -29,6 +29,7 @@
 		B596CD011D5CD6C8009CEBA9 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596CD001D5CD6C8009CEBA9 /* Helpers.swift */; };
 		B596CD031D5CFA7C009CEBA9 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596CD021D5CFA7C009CEBA9 /* Errors.swift */; };
 		B596CD0C1D5DD603009CEBA9 /* DictionaryEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B596CD0B1D5DD603009CEBA9 /* DictionaryEntry.swift */; };
+		B5AD16D31D7F2E3000206AF3 /* Favoritable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD16D21D7F2E3000206AF3 /* Favoritable.swift */; };
 		B5D15F4E1D56992C00A0FA03 /* EttaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55274551D56726C00932E30 /* EttaTests.swift */; };
 		B5EB833B1D789F82005BB6B3 /* EttaPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EB833A1D789F82005BB6B3 /* EttaPageViewController.swift */; };
 		B5FDD5301D762234004EBB63 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDD52F1D762234004EBB63 /* ResultsViewController.swift */; };
@@ -86,6 +87,7 @@
 		B596CD001D5CD6C8009CEBA9 /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		B596CD021D5CFA7C009CEBA9 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		B596CD0B1D5DD603009CEBA9 /* DictionaryEntry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DictionaryEntry.swift; path = ../DictionaryEntry.swift; sourceTree = "<group>"; };
+		B5AD16D21D7F2E3000206AF3 /* Favoritable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Favoritable.swift; sourceTree = "<group>"; };
 		B5EB833A1D789F82005BB6B3 /* EttaPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EttaPageViewController.swift; sourceTree = "<group>"; };
 		B5FAEEBB1D5A6DF30025C5E8 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		B5FDD52F1D762234004EBB63 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 		B566EBA51D5BA1DE007ECCA1 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				B5AD16D21D7F2E3000206AF3 /* Favoritable.swift */,
 				B5381EA61D75F43900CEB77F /* SearchControllerDelegate.swift */,
 				B566EB9F1D5B9AF6007ECCA1 /* ParserProtocol.swift */,
 				B55274701D567D8E00932E30 /* SearchProtocol.swift */,
@@ -529,6 +532,7 @@
 				B55274401D56726C00932E30 /* SearchViewController.swift in Sources */,
 				B596CD0C1D5DD603009CEBA9 /* DictionaryEntry.swift in Sources */,
 				B566EBA01D5B9AF6007ECCA1 /* ParserProtocol.swift in Sources */,
+				B5AD16D31D7F2E3000206AF3 /* Favoritable.swift in Sources */,
 				B5381EA51D75F3DC00CEB77F /* SearchController.swift in Sources */,
 				B552746F1D56762E00932E30 /* Config.swift in Sources */,
 				B5EB833B1D789F82005BB6B3 /* EttaPageViewController.swift in Sources */,

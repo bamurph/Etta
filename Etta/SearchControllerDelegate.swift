@@ -10,6 +10,7 @@ import Foundation
 
 protocol SearchControllerDelegate {
     var coreDataController: CoreDataController! { get }
+    var record: Record? { get set }
     var entries: [HTMLDictionaryEntry] { get set }
     func search(_ term: String)
     func history() -> [Record]

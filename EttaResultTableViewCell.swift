@@ -16,6 +16,7 @@ class EttaResultTableViewCell: UITableViewCell {
     @IBOutlet weak var linksList: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
 
+    var delegate: Favoritable?
     var links: [String] = []
 
 
@@ -23,7 +24,8 @@ class EttaResultTableViewCell: UITableViewCell {
         super.awakeFromNib()
         favoriteButton.setTitle(Config.favoriteStar[0], for: .normal)
         favoriteButton.setTitle(Config.favoriteStar[1], for: .selected)
-        // Initialization code
+        favoriteButton.setTitleColor(.darkGray, for: .selected)
+        favoriteButton.setTitleColor(.blue, for: .selected)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -31,8 +33,6 @@ class EttaResultTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
-
 
 
     @IBAction func toggleFavorite(_ sender: UIButton) {
@@ -43,5 +43,6 @@ class EttaResultTableViewCell: UITableViewCell {
         default:
             print("~ \(term) is not favorited!")
         }
+        delegate?.toggleFavorite()
     }
 }
