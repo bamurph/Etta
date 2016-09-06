@@ -22,11 +22,18 @@ class HistoryViewController: UIViewController {
         historyTableView.dataSource = self
 
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
 
     func refreshLog() {
         log = delegate.history()
         log.reverse()
     }
+
+    
 
 
 }

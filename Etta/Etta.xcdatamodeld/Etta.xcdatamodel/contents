@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11224.2" systemVersion="16A304a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11224.2" systemVersion="16A313a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Record" representedClassName="Record" syncable="YES" codeGenerationType="class">
-        <attribute name="created" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <attribute name="result" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="term" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="created" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="favorite" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" indexed="YES" syncable="YES"/>
+        <attribute name="result" attributeType="String" syncable="YES"/>
+        <attribute name="term" attributeType="String" indexed="YES" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Record" positionX="-4419" positionY="-7686" width="128" height="88"/>
+        <element name="Record" positionX="-4419" positionY="-7686" width="128" height="105"/>
     </elements>
 </model>

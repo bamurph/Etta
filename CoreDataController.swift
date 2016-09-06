@@ -67,6 +67,7 @@ class CoreDataController {
         saveContext()
     }
 
+
     // MARK: - Core Data Fetching 
 
     func findRecords() throws -> [Record] {
@@ -76,6 +77,16 @@ class CoreDataController {
             return searchResults
         } catch {
             print("Error with request: \(error)")
+            throw error
+        }
+    }
+
+    func favorites() throws -> [Record] {
+        do {
+            let records = try findRecords()
+            return records.filter { $0.favorite == true }
+        } catch {
+            print("error with request: \(error)")
             throw error
         }
     }

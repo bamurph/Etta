@@ -13,6 +13,7 @@ class EttaPageViewController: UIPageViewController, UIPageViewControllerDelegate
     var pages = [UIViewController]()
     var searchViewController: SearchViewController!
     var historyViewController: HistoryViewController!
+    var favoritesViewController: FavoritesViewController!
     var coreDataController: CoreDataController!
 
     override func viewDidLoad() {
@@ -34,9 +35,15 @@ class EttaPageViewController: UIPageViewController, UIPageViewControllerDelegate
             return hvc
         }()
 
+        favoritesViewController = {
+            let fvc = storyboard?.instantiateViewController(withIdentifier: "FavoritesViewController") as! FavoritesViewController!
+            fvc?.delegate = searchViewController
+            return fvc
+        }()
+
 
         /// Add view controllers to pages array and set initial page
-        pages = [searchViewController, historyViewController]
+        pages = [favoritesViewController, searchViewController, historyViewController]
         setViewControllers([searchViewController], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
 
     }
@@ -54,7 +61,7 @@ class EttaPageViewController: UIPageViewController, UIPageViewControllerDelegate
     }
 
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return pages.count
+        return 0
     }
 
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
@@ -62,13 +69,28 @@ class EttaPageViewController: UIPageViewController, UIPageViewControllerDelegate
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
-        if pendingViewControllers.first == historyViewController {
+        guard let firstVC = pendingViewControllers.first else { return }
+
+        switch firstVC {
+        case historyViewController:
             DispatchQueue.main.async {
                 self.historyViewController.refreshLog()
                 self.historyViewController.historyTableView.reloadData()
                 self.historyViewController.historyTableView.scrollToRow(at: IndexPath.init(row: 0, section: 0), at: .top, animated: false)
             }
+        case favoritesViewController:
+            DispatchQueue.main.async {
+                self.favoritesViewController.refreshFavorites()
+                self.favoritesViewController.favoritesTableView.reloadData()
+                self.favoritesViewController.favoritesTableView.scrollToRow(at: IndexPath.init(row: 0, section: 0), at: .top, animated: false)
+            }
+        default:
+            return
         }
+
+
+
+
     }
 
     override func didReceiveMemoryWarning() {

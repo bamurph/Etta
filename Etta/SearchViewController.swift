@@ -22,6 +22,8 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
     var coreDataController: CoreDataController!
     var searchController = SearchController()
 
+    var record: Record?
+
     var entries: [HTMLDictionaryEntry] = [] {
         didSet {
             resultsViewController.resultsTableView.reloadData()

@@ -26,12 +26,11 @@ class SearchController {
         if let record = recordMatching(term) {
             DispatchQueue.main.async {
                 self.delegate.entries = Parser(rawContent: record.result!).parsedContent()
+                self.delegate.record = record
             }
         } else {
             search(term)
-            return
         }
-
     }
 
     func search(_ term: String) {
@@ -46,6 +45,7 @@ class SearchController {
                     if self.delegate.entries.count != 0 {
                         query.result = response
                         self.delegate.coreDataController?.saveRecord(of: query)
+                        self.lookUp(term)
                     }
                 }
             }

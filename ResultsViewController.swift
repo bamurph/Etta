@@ -32,42 +32,6 @@ class ResultsViewController: UIViewController {
         resultsTableView.rowHeight = UITableViewAutomaticDimension
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
-
-// MARK: - Table View Protocol Conformance
-extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return delegate.entries.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EttaResultCell", for: indexPath) as! EttaResultTableViewCell
-        let entry = delegate.entries[indexPath.item]
-        cell.term.text = entry.termText()
-        cell.links = entry.linkedText()
-        cell.linksList.text = cell.links.joined(separator: ", ")
-        cell.entryDescription.attributedText = entry.descriptionWithLinks()
-
-        /// Add gesture recognizer
-        let tapEvent = UITapGestureRecognizer(target: self, action: #selector(ResultsViewController.textTapped(_:)))
-        cell.entryDescription.addGestureRecognizer(tapEvent)
-        return cell
-    }
-
     /// When the text view is tapped determine if the tap hit a link.
     /// If so, perform a search using that term.
     ///
@@ -95,9 +59,43 @@ extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
         }
 
         let tappedTerm = (textView.attributedText.string as NSString).substring(with: range)
-        
+
         delegate.search(tappedTerm)
     }
 
 }
 
+// MARK: - Table View Protocol Conformance
+extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return delegate.entries.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EttaResultCell", for: indexPath) as! EttaResultTableViewCell
+        let entry = delegate.entries[indexPath.item]
+        cell.delegate = self
+        cell.term.text = entry.termText()
+        cell.links = entry.linkedText()
+        cell.linksList.text = cell.links.joined(separator: ", ")
+        cell.entryDescription.attributedText = entry.descriptionWithLinks()
+        cell.favoriteButton.isSelected = delegate.record?.favorite ?? false
+        /// Add gesture recognizer
+        let tapEvent = UITapGestureRecognizer(target: self, action: #selector(ResultsViewController.textTapped(_:)))
+        cell.entryDescription.addGestureRecognizer(tapEvent)
+        return cell
+    }
+}
+
+extension ResultsViewController: Favoritable {
+    func toggleFavorite() {
+        guard let record = delegate.record else { return }
+        record.favorite = !record.favorite
+        
+        delegate.coreDataController.saveContext()
+    }
+}
