@@ -13,6 +13,7 @@ class EttaPageViewController: UIPageViewController, UIPageViewControllerDelegate
     var pages = [UIViewController]()
     var searchViewController: SearchViewController!
     var historyViewController: HistoryViewController!
+    var favoritesViewController: FavoritesViewController!
     var coreDataController: CoreDataController!
 
     override func viewDidLoad() {
@@ -34,9 +35,15 @@ class EttaPageViewController: UIPageViewController, UIPageViewControllerDelegate
             return hvc
         }()
 
+        favoritesViewController = {
+            let fvc = storyboard?.instantiateViewController(withIdentifier: "FavoritesViewController") as! FavoritesViewController!
+            fvc?.delegate = searchViewController
+            return fvc
+        }()
+
 
         /// Add view controllers to pages array and set initial page
-        pages = [searchViewController, historyViewController]
+        pages = [favoritesViewController, searchViewController, historyViewController]
         setViewControllers([searchViewController], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
 
     }

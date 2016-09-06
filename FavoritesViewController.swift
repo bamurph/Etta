@@ -10,12 +10,15 @@ import UIKit
 
 class FavoritesViewController: UIViewController {
 
+    @IBOutlet weak var favoritesTableView: UITableView!
+
     var delegate: SearchControllerDelegate!
     var favorites = [Record]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        favoritesTableView.delegate = self
+        favoritesTableView.dataSource = self
         // Do any additional setup after loading the view.
     }
 

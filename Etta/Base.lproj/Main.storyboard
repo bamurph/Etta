@@ -188,6 +188,55 @@
             </objects>
             <point key="canvasLocation" x="228" y="-214.54272863568218"/>
         </scene>
+        <!--Favorites View Controller-->
+        <scene sceneID="SxM-vp-sJq">
+            <objects>
+                <viewController storyboardIdentifier="FavoritesViewController" id="aXf-st-sr1" customClass="FavoritesViewController" customModule="Etta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jOw-Nc-0bk"/>
+                        <viewControllerLayoutGuide type="bottom" id="Y5Y-4b-nlM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tsa-CT-cxN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJT-2n-B63">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FAL-vw-Vk9">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6eX-vc-tGK">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6eX-vc-tGK" id="RAO-Np-Mfc">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zJT-2n-B63" firstAttribute="top" secondItem="jOw-Nc-0bk" secondAttribute="bottom" constant="8" id="1hI-Rz-x30"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FAL-vw-Vk9" secondAttribute="trailing" constant="-16" id="545-4v-HS7"/>
+                            <constraint firstItem="FAL-vw-Vk9" firstAttribute="leading" secondItem="tsa-CT-cxN" secondAttribute="leadingMargin" constant="-16" id="LBs-tX-cPv"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="zJT-2n-B63" secondAttribute="leading" id="jOu-26-Mc7"/>
+                            <constraint firstItem="Y5Y-4b-nlM" firstAttribute="top" secondItem="FAL-vw-Vk9" secondAttribute="bottom" id="sth-XM-eZm"/>
+                            <constraint firstItem="FAL-vw-Vk9" firstAttribute="top" secondItem="zJT-2n-B63" secondAttribute="bottom" constant="16" id="vbW-pn-rNG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="favoritesTableView" destination="FAL-vw-Vk9" id="P8A-RO-4cY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lAF-P1-5cA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1133.5999999999999" y="-168.6656671664168"/>
+        </scene>
         <!--History View Controller-->
         <scene sceneID="olM-Gp-yfu">
             <objects>
@@ -212,11 +261,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="41"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g47-sP-L4L" id="6Za-FU-McH">
-                                            <frame key="frameInset" width="375" height="40.5"/>
+                                            <frame key="frameInset" width="375" height="40"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="32n-Nt-GFx">
-                                                    <frame key="frameInset" minX="15" width="345" height="40.5"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="40"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
