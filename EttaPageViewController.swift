@@ -69,13 +69,28 @@ class EttaPageViewController: UIPageViewController, UIPageViewControllerDelegate
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
-        if pendingViewControllers.first == historyViewController {
+        guard let firstVC = pendingViewControllers.first else { return }
+
+        switch firstVC {
+        case historyViewController:
             DispatchQueue.main.async {
                 self.historyViewController.refreshLog()
                 self.historyViewController.historyTableView.reloadData()
                 self.historyViewController.historyTableView.scrollToRow(at: IndexPath.init(row: 0, section: 0), at: .top, animated: false)
             }
+        case favoritesViewController:
+            DispatchQueue.main.async {
+                self.favoritesViewController.refreshFavorites()
+                self.favoritesViewController.favoritesTableView.reloadData()
+                self.favoritesViewController.favoritesTableView.scrollToRow(at: IndexPath.init(row: 0, section: 0), at: .top, animated: false)
+            }
+        default:
+            return
         }
+
+
+
+
     }
 
     override func didReceiveMemoryWarning() {

@@ -67,6 +67,7 @@ class CoreDataController {
         saveContext()
     }
 
+
     // MARK: - Core Data Fetching 
 
     func findRecords() throws -> [Record] {
@@ -81,17 +82,13 @@ class CoreDataController {
     }
 
     func favorites() throws -> [Record] {
-        let context = persistentContainer.viewContext
-        let request: NSFetchRequest<Record> = Record.fetchRequest()
-        request.predicate = NSPredicate(format: "favorite == %@ ", true as CVarArg)
         do {
-            let searchResults = try context.fetch(request)
-            return searchResults
+            let records = try findRecords()
+            return records.filter { $0.favorite == true }
         } catch {
-            print("Error with request: \(error)")
+            print("error with request: \(error)")
             throw error
         }
-
     }
 }
 

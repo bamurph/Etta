@@ -95,6 +95,7 @@ extension ResultsViewController: Favoritable {
     func toggleFavorite() {
         guard let record = delegate.record else { return }
         record.favorite = !record.favorite
+        
         delegate.coreDataController.saveContext()
     }
 }
