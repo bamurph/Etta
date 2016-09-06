@@ -84,7 +84,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lG5-ko-fyW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sBA-IY-cLZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="512"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="512.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="303" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gl4-eI-LbV">
@@ -95,10 +95,10 @@
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EttaResultCell" id="L2Z-qo-ApA" userLabel="EttaResult TVC" customClass="EttaResultTableViewCell" customModule="Etta">
-                                        <rect key="frame" x="0.0" y="28" width="343" height="303"/>
+                                        <rect key="frame" x="0.0" y="28" width="960" height="303"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="L2Z-qo-ApA" id="qjp-zv-KLd">
-                                            <frame key="frameInset" width="343" height="303"/>
+                                            <frame key="frameInset" width="960" height="303"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUB-sO-NNy">
@@ -137,6 +137,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Np4-p6-xga" secondAttribute="trailing" id="0Yf-di-gsu"/>
+                                                <constraint firstAttribute="trailing" secondItem="YkH-Y5-FBC" secondAttribute="trailing" constant="8" id="0zn-0z-GYm"/>
                                                 <constraint firstItem="YkH-Y5-FBC" firstAttribute="top" secondItem="Np4-p6-xga" secondAttribute="bottom" constant="24" id="Gd4-xk-zW8"/>
                                                 <constraint firstItem="YkH-Y5-FBC" firstAttribute="bottom" secondItem="qjp-zv-KLd" secondAttribute="bottomMargin" id="Khx-D4-J06"/>
                                                 <constraint firstItem="hG3-Fu-tvR" firstAttribute="leading" secondItem="YkH-Y5-FBC" secondAttribute="leading" id="Msl-IY-YjD"/>
@@ -144,7 +145,6 @@
                                                 <constraint firstItem="WUB-sO-NNy" firstAttribute="leading" secondItem="hG3-Fu-tvR" secondAttribute="leading" id="Tdp-yM-vMs"/>
                                                 <constraint firstItem="YkH-Y5-FBC" firstAttribute="top" secondItem="hG3-Fu-tvR" secondAttribute="bottom" constant="8" symbolic="YES" id="ccl-q9-dLS"/>
                                                 <constraint firstItem="Np4-p6-xga" firstAttribute="baseline" secondItem="WUB-sO-NNy" secondAttribute="baseline" id="gCy-Ab-2Js"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="YkH-Y5-FBC" secondAttribute="trailing" id="mDu-N2-bKF"/>
                                                 <constraint firstItem="WUB-sO-NNy" firstAttribute="top" secondItem="qjp-zv-KLd" secondAttribute="topMargin" constant="2" id="ou6-rl-3s5"/>
                                                 <constraint firstItem="hG3-Fu-tvR" firstAttribute="top" secondItem="WUB-sO-NNy" secondAttribute="bottom" constant="8" symbolic="YES" id="wEk-Yj-bee"/>
                                             </constraints>
@@ -212,11 +212,11 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="41"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g47-sP-L4L" id="6Za-FU-McH">
-                                            <frame key="frameInset" width="375" height="40"/>
+                                            <frame key="frameInset" width="375" height="40.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="32n-Nt-GFx">
-                                                    <frame key="frameInset" minX="15" width="345" height="40"/>
+                                                    <frame key="frameInset" minX="15" width="345" height="40.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>

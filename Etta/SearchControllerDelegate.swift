@@ -27,4 +27,14 @@ extension SearchControllerDelegate {
             return []
         }
     }
+
+    func favorites() -> [Record] {
+        do {
+            let records = try coreDataController.favorites()
+            return records
+        } catch {
+            print(error)
+            return []
+        }
+    }
 }

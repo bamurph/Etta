@@ -79,5 +79,19 @@ class CoreDataController {
             throw error
         }
     }
+
+    func favorites() throws -> [Record] {
+        let context = persistentContainer.viewContext
+        let request: NSFetchRequest<Record> = Record.fetchRequest()
+        request.predicate = NSPredicate(format: "favorite == %@ ", true as CVarArg)
+        do {
+            let searchResults = try context.fetch(request)
+            return searchResults
+        } catch {
+            print("Error with request: \(error)")
+            throw error
+        }
+
+    }
 }
 

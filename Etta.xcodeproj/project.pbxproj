@@ -22,6 +22,7 @@
 		B55274611D56726C00932E30 /* EttaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55274601D56726C00932E30 /* EttaUITests.swift */; };
 		B552746F1D56762E00932E30 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = B552746E1D56762E00932E30 /* Config.swift */; };
 		B55274711D567D8E00932E30 /* SearchProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55274701D567D8E00932E30 /* SearchProtocol.swift */; };
+		B55BF1A21D7F5A2000B2DD78 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55BF1A11D7F5A2000B2DD78 /* FavoritesViewController.swift */; };
 		B566EBA01D5B9AF6007ECCA1 /* ParserProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566EB9F1D5B9AF6007ECCA1 /* ParserProtocol.swift */; };
 		B566EBA21D5BA1A1007ECCA1 /* SearchQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566EBA11D5BA1A1007ECCA1 /* SearchQuery.swift */; };
 		B566EBA41D5BA1C3007ECCA1 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B566EBA31D5BA1C3007ECCA1 /* Parser.swift */; };
@@ -79,6 +80,7 @@
 		B55274621D56726C00932E30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B552746E1D56762E00932E30 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Config.swift; path = Etta/Config.swift; sourceTree = "<group>"; };
 		B55274701D567D8E00932E30 /* SearchProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchProtocol.swift; sourceTree = "<group>"; };
+		B55BF1A11D7F5A2000B2DD78 /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		B566EB9F1D5B9AF6007ECCA1 /* ParserProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserProtocol.swift; sourceTree = "<group>"; };
 		B566EBA11D5BA1A1007ECCA1 /* SearchQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchQuery.swift; sourceTree = "<group>"; };
 		B566EBA31D5BA1C3007ECCA1 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				B5EB833A1D789F82005BB6B3 /* EttaPageViewController.swift */,
 				B5FDD5311D762BF4004EBB63 /* HistoryViewController.swift */,
+				B55BF1A11D7F5A2000B2DD78 /* FavoritesViewController.swift */,
 				B5FDD52F1D762234004EBB63 /* ResultsViewController.swift */,
 				B52C69FC1D74B576002D9480 /* CoreDataController.swift */,
 				B552743F1D56726C00932E30 /* SearchViewController.swift */,
@@ -547,6 +550,7 @@
 				B55274461D56726C00932E30 /* Etta.xcdatamodeld in Sources */,
 				B566EBA21D5BA1A1007ECCA1 /* SearchQuery.swift in Sources */,
 				B5FDD5321D762BF4004EBB63 /* HistoryViewController.swift in Sources */,
+				B55BF1A21D7F5A2000B2DD78 /* FavoritesViewController.swift in Sources */,
 				B552743E1D56726C00932E30 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
