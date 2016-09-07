@@ -44,8 +44,8 @@ class EttaPageViewController: UIPageViewController, UIPageViewControllerDelegate
 
         /// Add view controllers to pages array and set initial page
         pages = [favoritesViewController, searchViewController, historyViewController]
-        setViewControllers([searchViewController], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
-
+        //showSearchViewController(completion: nil)
+        setViewControllers([searchViewController], direction: .forward, animated: false, completion: nil)
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -59,6 +59,7 @@ class EttaPageViewController: UIPageViewController, UIPageViewControllerDelegate
         let nextIndex = abs((currentIndex + 1) % pages.count)
         return pages[nextIndex]
     }
+
 
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
         return 0
@@ -87,6 +88,17 @@ class EttaPageViewController: UIPageViewController, UIPageViewControllerDelegate
         default:
             return
         }
+    }
+
+    func showSearchViewController(completion: ((Bool) -> Void)?) {
+        guard let currentVC = viewControllers?.first else { return }
+        guard let svcIndex = pages.index(of: searchViewController) else { return }
+        guard let cvcIndex = pages.index(of: currentVC) else { return }
+        guard cvcIndex != svcIndex else { return }
+
+        let direction: UIPageViewControllerNavigationDirection = cvcIndex < svcIndex ? .forward : .reverse
+
+        setViewControllers([searchViewController], direction: direction, animated: true, completion: completion)
 
 
 

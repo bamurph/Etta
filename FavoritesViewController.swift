@@ -51,4 +51,8 @@ extension FavoritesViewController: UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.text = favorites[indexPath.item].term
         return cell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView(tableView, didSelectRowAt: indexPath, using: delegate)
+    }
 }
