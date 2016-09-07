@@ -21,8 +21,8 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
     var resultsViewController: ResultsViewController!
     var coreDataController: CoreDataController!
     var searchController = SearchController()
-
     var record: Record?
+    var searchBoxCentered = true
 
     var entries: [HTMLDictionaryEntry] = [] {
         didSet {
@@ -59,6 +59,7 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
 
     // MARK: - Actions
     @IBAction func searchChanged(_ sender: UITextField) {
+        guard searchBoxCentered == false else { pushSearchToTop(); return }
         guard let term = sender.text?.trim()  else {
             return
         }
@@ -83,7 +84,7 @@ extension SearchViewController {
 
     func positionSearchInCenter() {
         searchBoxTopConstraint.constant = view.frame.midY - searchBoxHeightConstraint.constant
-
+        searchBoxCentered = true
         UIView.animate(withDuration: 0.0) {
             self.view.layoutIfNeeded()
         }
@@ -91,7 +92,7 @@ extension SearchViewController {
 
     func pushSearchToTop() {
         searchBoxTopConstraint.constant = 8.0
-
+        searchBoxCentered = false
         UIView.animate(withDuration: 0.5) {
             self.view.layoutIfNeeded()
         }
