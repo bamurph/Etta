@@ -29,7 +29,6 @@ class FavoritesViewController: UIViewController {
 
     func refreshFavorites() {
         favorites = delegate.favorites()
-        favorites.reverse()
     }
 
 }

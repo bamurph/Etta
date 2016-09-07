@@ -30,7 +30,6 @@ class HistoryViewController: UIViewController {
 
     func refreshLog() {
         log = delegate.history()
-        log.reverse()
     }
 
     
