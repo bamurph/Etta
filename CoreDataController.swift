@@ -72,6 +72,8 @@ class CoreDataController {
 
     func findRecords() throws -> [Record] {
         let request: NSFetchRequest<Record> = Record.fetchRequest()
+        let dateSort = NSSortDescriptor(key: "created", ascending: false)
+        request.sortDescriptors = [dateSort]
         do {
             let searchResults = try persistentContainer.viewContext.fetch(request)
             return searchResults
@@ -90,5 +92,17 @@ class CoreDataController {
             throw error
         }
     }
+
+    func update(record: Record) throws {
+        print("updating record!")
+        record.setValue(NSDate.init(), forKey: "created")
+        do {
+            try persistentContainer.viewContext.save()
+        } catch {
+            let saveError = error as NSError
+            print(saveError)
+        }
+    }
 }
+
 

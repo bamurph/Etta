@@ -27,6 +27,7 @@ class SearchController {
             DispatchQueue.main.async {
                 self.delegate.entries = Parser(rawContent: record.result!).parsedContent()
                 self.delegate.record = record
+                try? self.delegate.coreDataController.update(record: record)
             }
         } else {
             search(term)
