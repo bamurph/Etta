@@ -28,7 +28,6 @@ class EttaPageViewController: UIPageViewController, UIPageViewControllerDelegate
             return svc
         }()
 
-
         historyViewController = {
             let hvc = storyboard?.instantiateViewController(withIdentifier: "HistoryViewController") as! HistoryViewController!
             hvc?.delegate = searchViewController
@@ -50,7 +49,7 @@ class EttaPageViewController: UIPageViewController, UIPageViewControllerDelegate
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         let currentIndex = pages.index(of: viewController)!
-        let previousIndex = abs((currentIndex - 1) % pages.count)
+        let previousIndex = abs((currentIndex - 1 + pages.count) % pages.count)
         return pages[previousIndex]
     }
 
