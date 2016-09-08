@@ -11,6 +11,8 @@ import UIKit
 class ResultsViewController: UIViewController {
 
     @IBOutlet weak var resultsTableView: UITableView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var noResultsLabel: UILabel!
 
     var delegate: SearchControllerDelegate!
 
@@ -95,7 +97,7 @@ extension ResultsViewController: Favoritable {
     func toggleFavorite() {
         guard let record = delegate.record else { return }
         record.favorite = !record.favorite
-        
+
         delegate.coreDataController.saveContext()
     }
 }

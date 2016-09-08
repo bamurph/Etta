@@ -16,6 +16,8 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
     @IBOutlet weak var searchToResultsSpacingConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchBoxHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var searchBoxTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var searchLabel: UILabel!
+
 
 
     var resultsViewController: ResultsViewController!
@@ -27,6 +29,8 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
     var entries: [HTMLDictionaryEntry] = [] {
         didSet {
             resultsViewController.resultsTableView.reloadData()
+            resultsViewController.activityIndicator.stopAnimating()
+            resultsViewController.noResultsLabel.isHidden = entries.count > 0
         }
     }
 
@@ -60,9 +64,12 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
     // MARK: - Actions
     @IBAction func searchChanged(_ sender: UITextField) {
         if searchBoxCentered == true { pushSearchToTop() }
-        guard let term = sender.text?.trim()  else {
+        resultsViewController.noResultsLabel.isHidden = true
+
+        guard let term = sender.text?.trim() else {
             return
         }
+        resultsViewController.activityIndicator.startAnimating()
         searchController.lookUp(term)
     }
 
@@ -83,7 +90,7 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
 extension SearchViewController {
 
     func positionSearchInCenter() {
-        searchBoxTopConstraint.constant = view.frame.midY - searchBoxHeightConstraint.constant
+        searchBoxTopConstraint.constant = view.frame.midY - searchBoxHeightConstraint.constant - 50
         searchBoxCentered = true
         UIView.animate(withDuration: 0.0) {
             self.view.layoutIfNeeded()

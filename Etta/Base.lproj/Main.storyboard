@@ -68,6 +68,7 @@
                         <outlet property="searchBox" destination="6bI-LW-c7T" id="bPn-ia-jxX"/>
                         <outlet property="searchBoxHeightConstraint" destination="ev4-lc-aAB" id="LAF-UT-MlD"/>
                         <outlet property="searchBoxTopConstraint" destination="oZy-1C-Jzy" id="P9Q-FS-Jyw"/>
+                        <outlet property="searchLabel" destination="dzN-3e-Rvr" id="swz-j3-pyz"/>
                         <outlet property="searchToResultsSpacingConstraint" destination="ev4-lc-aAB" id="dVs-em-cYd"/>
                     </connections>
                 </viewController>
@@ -84,7 +85,7 @@
                         <viewControllerLayoutGuide type="bottom" id="lG5-ko-fyW"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sBA-IY-cLZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="533"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="533.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="303" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gl4-eI-LbV">
@@ -135,11 +136,9 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Np4-p6-xga" secondAttribute="trailing" id="0Yf-di-gsu"/>
                                                 <constraint firstAttribute="trailing" secondItem="YkH-Y5-FBC" secondAttribute="trailing" constant="8" id="0zn-0z-GYm"/>
-                                                <constraint firstItem="YkH-Y5-FBC" firstAttribute="top" secondItem="Np4-p6-xga" secondAttribute="bottom" constant="24" id="Gd4-xk-zW8"/>
                                                 <constraint firstItem="YkH-Y5-FBC" firstAttribute="bottom" secondItem="qjp-zv-KLd" secondAttribute="bottomMargin" id="Khx-D4-J06"/>
                                                 <constraint firstItem="hG3-Fu-tvR" firstAttribute="leading" secondItem="YkH-Y5-FBC" secondAttribute="leading" id="Msl-IY-YjD"/>
                                                 <constraint firstItem="WUB-sO-NNy" firstAttribute="leading" secondItem="qjp-zv-KLd" secondAttribute="leadingMargin" id="QuK-E1-85d"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="YkH-Y5-FBC" secondAttribute="bottom" constant="-1" id="RHH-de-sgf"/>
                                                 <constraint firstItem="WUB-sO-NNy" firstAttribute="leading" secondItem="hG3-Fu-tvR" secondAttribute="leading" id="Tdp-yM-vMs"/>
                                                 <constraint firstItem="YkH-Y5-FBC" firstAttribute="top" secondItem="hG3-Fu-tvR" secondAttribute="bottom" constant="8" symbolic="YES" id="ccl-q9-dLS"/>
                                                 <constraint firstItem="Np4-p6-xga" firstAttribute="baseline" secondItem="WUB-sO-NNy" secondAttribute="baseline" id="gCy-Ab-2Js"/>
@@ -166,16 +165,33 @@
                                     <outletCollection property="gestureRecognizers" destination="gJZ-tb-EQ0" appends="YES" id="tqa-bf-0Vu"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Jwu-y1-lOY">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="DgK-W9-aTA"/>
+                                    <constraint firstAttribute="height" constant="40" id="g1k-Oc-c6G"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Results Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faT-XA-Kxs">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="faT-XA-Kxs" firstAttribute="centerX" secondItem="Jwu-y1-lOY" secondAttribute="centerX" id="1cl-hY-Dwf"/>
+                            <constraint firstItem="Jwu-y1-lOY" firstAttribute="top" secondItem="gl4-eI-LbV" secondAttribute="top" constant="100" id="J1T-ky-gdu"/>
                             <constraint firstItem="gl4-eI-LbV" firstAttribute="bottom" secondItem="lG5-ko-fyW" secondAttribute="top" id="V5c-dN-iVb"/>
                             <constraint firstItem="gl4-eI-LbV" firstAttribute="leading" secondItem="sBA-IY-cLZ" secondAttribute="leadingMargin" id="cgG-Fa-N5C"/>
+                            <constraint firstItem="Jwu-y1-lOY" firstAttribute="centerX" secondItem="sBA-IY-cLZ" secondAttribute="centerX" id="dRb-Ne-w4y"/>
                             <constraint firstItem="gl4-eI-LbV" firstAttribute="trailing" secondItem="sBA-IY-cLZ" secondAttribute="trailingMargin" id="fdy-nz-JpT"/>
                             <constraint firstItem="gl4-eI-LbV" firstAttribute="top" secondItem="mNm-Nu-l2g" secondAttribute="bottom" id="fkJ-j5-cfm"/>
+                            <constraint firstItem="faT-XA-Kxs" firstAttribute="centerY" secondItem="Jwu-y1-lOY" secondAttribute="centerY" id="vMd-VK-4VM"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="Jwu-y1-lOY" id="huA-hp-PpX"/>
+                        <outlet property="noResultsLabel" destination="faT-XA-Kxs" id="WGd-pq-xRf"/>
                         <outlet property="resultsTableView" destination="gl4-eI-LbV" id="g0r-4j-QPU"/>
                     </connections>
                 </viewController>
