@@ -42,7 +42,7 @@ class EttaPageViewController: UIPageViewController, UIPageViewControllerDelegate
 
 
         /// Add view controllers to pages array and set initial page
-        pages = [favoritesViewController, searchViewController, historyViewController]
+        pages = [historyViewController, searchViewController, favoritesViewController]
         //showSearchViewController(completion: nil)
         setViewControllers([searchViewController], direction: .forward, animated: false, completion: nil)
     }
