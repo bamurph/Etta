@@ -36,6 +36,8 @@
 		B5EB833B1D789F82005BB6B3 /* EttaPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EB833A1D789F82005BB6B3 /* EttaPageViewController.swift */; };
 		B5FDD5301D762234004EBB63 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDD52F1D762234004EBB63 /* ResultsViewController.swift */; };
 		B5FDD5321D762BF4004EBB63 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDD5311D762BF4004EBB63 /* HistoryViewController.swift */; };
+		B5FF162F1D8204A8004AD8F1 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B5FF162D1D8204A8004AD8F1 /* iTunesArtwork.png */; };
+		B5FF16301D8204A8004AD8F1 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5FF162E1D8204A8004AD8F1 /* iTunesArtwork@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,10 @@
 		B5FAEEBB1D5A6DF30025C5E8 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		B5FDD52F1D762234004EBB63 /* ResultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		B5FDD5311D762BF4004EBB63 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		B5FF162D1D8204A8004AD8F1 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = "Art/Assets/App Icon/iTunesArtwork.png"; sourceTree = "<group>"; };
+		B5FF162E1D8204A8004AD8F1 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "Art/Assets/App Icon/iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		B5FF16311D820531004AD8F1 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iTunesArtwork@2x"; path = "Art/iTunesArtwork@2x"; sourceTree = "<group>"; };
+		B5FF16321D820531004AD8F1 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Art/iTunesArtwork; sourceTree = "<group>"; };
 		C62DE18C01052B1165E8B70D /* Pods-Etta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Etta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Etta/Pods-Etta.debug.xcconfig"; sourceTree = "<group>"; };
 		C685D3FEF6137676754DAD35 /* Pods-Etta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Etta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Etta/Pods-Etta.release.xcconfig"; sourceTree = "<group>"; };
 		C7BACA7433420F20789471AE /* Pods-EttaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EttaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EttaUITests/Pods-EttaUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -169,12 +175,16 @@
 		B55274311D56726C00932E30 = {
 			isa = PBXGroup;
 			children = (
+				B5FF16311D820531004AD8F1 /* iTunesArtwork@2x */,
+				B5FF16321D820531004AD8F1 /* iTunesArtwork */,
 				B596CD091D5D1583009CEBA9 /* Application */,
 				B566EBA61D5BA1E6007ECCA1 /* Models */,
 				B54266951D6649990066E4D5 /* Controllers */,
 				B57E3BE61D623FDF007ECA27 /* Views */,
 				B596CD0A1D5D160E009CEBA9 /* Common */,
 				B55274471D56726C00932E30 /* Assets.xcassets */,
+				B5FF162D1D8204A8004AD8F1 /* iTunesArtwork.png */,
+				B5FF162E1D8204A8004AD8F1 /* iTunesArtwork@2x.png */,
 				B55274541D56726C00932E30 /* EttaTests */,
 				B552745F1D56726C00932E30 /* EttaUITests */,
 				49AB807D39B3E12A35DAF183 /* Frameworks */,
@@ -386,7 +396,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B552744B1D56726C00932E30 /* LaunchScreen.storyboard in Resources */,
+				B5FF16301D8204A8004AD8F1 /* iTunesArtwork@2x.png in Resources */,
 				B55274481D56726C00932E30 /* Assets.xcassets in Resources */,
+				B5FF162F1D8204A8004AD8F1 /* iTunesArtwork.png in Resources */,
 				B55274431D56726C00932E30 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
