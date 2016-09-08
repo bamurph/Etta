@@ -39,7 +39,9 @@ class SearchController {
 
         do {
             try query.search { (response) in
-                guard response != nil else { return }
+                guard response != nil else {
+                    self.delegate.entries = []
+                    return }
                 DispatchQueue.main.async {
                     self.delegate.entries = Parser(rawContent: response!).parsedContent()
                     /// If the returned content parses into one or more entries then save the record for future use
