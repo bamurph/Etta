@@ -59,7 +59,7 @@ class SearchViewController: UIViewController, SearchControllerDelegate {
 
     // MARK: - Actions
     @IBAction func searchChanged(_ sender: UITextField) {
-        guard searchBoxCentered == false else { pushSearchToTop(); return }
+        if searchBoxCentered == true { pushSearchToTop() }
         guard let term = sender.text?.trim()  else {
             return
         }
