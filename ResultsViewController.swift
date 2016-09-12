@@ -83,6 +83,7 @@ extension ResultsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.delegate = self
         cell.term.text = entry.termText()
         cell.links = entry.linkedText()
+    
         cell.entryDescription.attributedText = entry.descriptionWithLinks()
         cell.favoriteButton.isSelected = delegate.record?.favorite ?? false
         /// Add gesture recognizer
