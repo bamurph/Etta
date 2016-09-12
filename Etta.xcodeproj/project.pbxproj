@@ -38,6 +38,7 @@
 		B5FDD5321D762BF4004EBB63 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDD5311D762BF4004EBB63 /* HistoryViewController.swift */; };
 		B5FF162F1D8204A8004AD8F1 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = B5FF162D1D8204A8004AD8F1 /* iTunesArtwork.png */; };
 		B5FF16301D8204A8004AD8F1 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B5FF162E1D8204A8004AD8F1 /* iTunesArtwork@2x.png */; };
+		B5FF16341D871648004AD8F1 /* UITableView+ScrollToTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FF16331D871648004AD8F1 /* UITableView+ScrollToTop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		B5FF162E1D8204A8004AD8F1 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "Art/Assets/App Icon/iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		B5FF16311D820531004AD8F1 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; name = "iTunesArtwork@2x"; path = "Art/iTunesArtwork@2x"; sourceTree = "<group>"; };
 		B5FF16321D820531004AD8F1 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Art/iTunesArtwork; sourceTree = "<group>"; };
+		B5FF16331D871648004AD8F1 /* UITableView+ScrollToTop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+ScrollToTop.swift"; sourceTree = "<group>"; };
 		C62DE18C01052B1165E8B70D /* Pods-Etta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Etta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Etta/Pods-Etta.debug.xcconfig"; sourceTree = "<group>"; };
 		C685D3FEF6137676754DAD35 /* Pods-Etta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Etta.release.xcconfig"; path = "Pods/Target Support Files/Pods-Etta/Pods-Etta.release.xcconfig"; sourceTree = "<group>"; };
 		C7BACA7433420F20789471AE /* Pods-EttaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EttaUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EttaUITests/Pods-EttaUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -175,8 +177,6 @@
 		B55274311D56726C00932E30 = {
 			isa = PBXGroup;
 			children = (
-				B5FF16311D820531004AD8F1 /* iTunesArtwork@2x */,
-				B5FF16321D820531004AD8F1 /* iTunesArtwork */,
 				B596CD091D5D1583009CEBA9 /* Application */,
 				B566EBA61D5BA1E6007ECCA1 /* Models */,
 				B54266951D6649990066E4D5 /* Controllers */,
@@ -224,6 +224,7 @@
 		B566EBA51D5BA1DE007ECCA1 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				B5FF16331D871648004AD8F1 /* UITableView+ScrollToTop.swift */,
 				B5AD16D21D7F2E3000206AF3 /* Favoritable.swift */,
 				B5381EA61D75F43900CEB77F /* SearchControllerDelegate.swift */,
 				B566EB9F1D5B9AF6007ECCA1 /* ParserProtocol.swift */,
@@ -266,6 +267,8 @@
 		B596CD0A1D5D160E009CEBA9 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B5FF16311D820531004AD8F1 /* iTunesArtwork@2x */,
+				B5FF16321D820531004AD8F1 /* iTunesArtwork */,
 				B55274441D56726C00932E30 /* Etta.xcdatamodeld */,
 				B552744C1D56726C00932E30 /* Info.plist */,
 				B59309AD1D5784920042D0B1 /* README.md */,
@@ -548,6 +551,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B55274401D56726C00932E30 /* SearchViewController.swift in Sources */,
+				B5FF16341D871648004AD8F1 /* UITableView+ScrollToTop.swift in Sources */,
 				B596CD0C1D5DD603009CEBA9 /* DictionaryEntry.swift in Sources */,
 				B566EBA01D5B9AF6007ECCA1 /* ParserProtocol.swift in Sources */,
 				B5ADEDAA1D801C7B00689723 /* TableViewDelegate+Search.swift in Sources */,

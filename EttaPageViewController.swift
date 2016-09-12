@@ -76,13 +76,13 @@ class EttaPageViewController: UIPageViewController, UIPageViewControllerDelegate
             DispatchQueue.main.async {
                 self.historyViewController.refreshLog()
                 self.historyViewController.historyTableView.reloadData()
-                self.historyViewController.historyTableView.scrollToRow(at: IndexPath.init(row: 0, section: 0), at: .top, animated: false)
+                self.historyViewController.historyTableView.scrollToTop()
             }
         case favoritesViewController:
             DispatchQueue.main.async {
                 self.favoritesViewController.refreshFavorites()
                 self.favoritesViewController.favoritesTableView.reloadData()
-                self.favoritesViewController.favoritesTableView.scrollToRow(at: IndexPath.init(row: 0, section: 0), at: .top, animated: false)
+                self.favoritesViewController.favoritesTableView.scrollToTop()
             }
         default:
             return
