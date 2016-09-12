@@ -99,8 +99,8 @@
                                             <frame key="frameInset" width="343" height="303"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUB-sO-NNy">
-                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="word (n.)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUB-sO-NNy">
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -135,7 +135,7 @@
                                                 <constraint firstItem="YkH-Y5-FBC" firstAttribute="bottom" secondItem="qjp-zv-KLd" secondAttribute="bottomMargin" id="Khx-D4-J06"/>
                                                 <constraint firstItem="WUB-sO-NNy" firstAttribute="leading" secondItem="qjp-zv-KLd" secondAttribute="leadingMargin" id="QuK-E1-85d"/>
                                                 <constraint firstItem="Np4-p6-xga" firstAttribute="baseline" secondItem="WUB-sO-NNy" secondAttribute="baseline" id="gCy-Ab-2Js"/>
-                                                <constraint firstItem="YkH-Y5-FBC" firstAttribute="top" secondItem="Np4-p6-xga" secondAttribute="bottom" constant="25" id="hLN-fI-0mm"/>
+                                                <constraint firstItem="YkH-Y5-FBC" firstAttribute="top" secondItem="Np4-p6-xga" secondAttribute="bottom" constant="16" id="hLN-fI-0mm"/>
                                                 <constraint firstItem="WUB-sO-NNy" firstAttribute="top" secondItem="qjp-zv-KLd" secondAttribute="topMargin" constant="2" id="ou6-rl-3s5"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -156,13 +156,13 @@
                                     <outletCollection property="gestureRecognizers" destination="gJZ-tb-EQ0" appends="YES" id="tqa-bf-0Vu"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Jwu-y1-lOY">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Jwu-y1-lOY" propertyAccessControl="all">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="DgK-W9-aTA"/>
                                     <constraint firstAttribute="height" constant="40" id="g1k-Oc-c6G"/>
                                 </constraints>
                             </activityIndicatorView>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Results Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faT-XA-Kxs">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Results Found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="faT-XA-Kxs" propertyAccessControl="all">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
