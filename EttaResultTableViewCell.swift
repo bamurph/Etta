@@ -13,7 +13,6 @@ class EttaResultTableViewCell: UITableViewCell {
 
     @IBOutlet weak var term: UILabel!
     @IBOutlet weak var entryDescription: UITextView!
-    @IBOutlet weak var linksList: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
 
     var delegate: Favoritable?

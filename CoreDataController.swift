@@ -86,7 +86,9 @@ class CoreDataController {
     func favorites() throws -> [Record] {
         do {
             let records = try findRecords()
-            return records.filter { $0.favorite == true }
+            return records
+                .filter { $0.favorite == true }
+                .sorted { $0.0.term! < $0.1.term! }
         } catch {
             print("error with request: \(error)")
             throw error

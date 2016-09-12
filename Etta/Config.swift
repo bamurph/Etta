@@ -12,6 +12,7 @@ import UIKit
 struct Config {
     static let eoURL = "https://ettaserver.herokuapp.com/search/"
     static let fontSize: CGFloat = 18.0
+    static let lineHeight: CGFloat = Config.fontSize * 1.2
     static let favoriteStar = ["☆", "★"]
 }
 
