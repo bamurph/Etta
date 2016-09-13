@@ -61,11 +61,12 @@ class EttaPageViewController: UIPageViewController, UIPageViewControllerDelegate
 
 
     func presentationCount(for pageViewController: UIPageViewController) -> Int {
-        return 0
+        return pages.count
     }
 
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-        return 0
+        guard let currentController = viewControllers?.first else { return 0 }
+        return pages.index(of: currentController) ?? 0
     }
 
     func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
