@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '34E798928C36384DB4141B2E957C5832'
-               BlueprintName = 'Pods-Etta'
+               BlueprintIdentifier = '2B5D2E4D94E1DEBBBEFFC6097C11016D'
+               BlueprintName = 'Fingertips'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods-Etta.framework'>
+               BuildableName = 'Fingertips.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

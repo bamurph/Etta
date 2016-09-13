@@ -9,6 +9,7 @@ target 'Etta' do
 
   # Pods for Etta
   pod "HTMLReader"
+  pod "Fingertips", "~> 0.4"
 
   target 'EttaTests' do
     inherit! :search_paths

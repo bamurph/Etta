@@ -8,11 +8,20 @@
 
 import UIKit
 import CoreData
+import Fingertips
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    var window: UIWindow?
+    var window: UIWindow? = {
+        let window = MBFingerTipWindow(frame: UIScreen.main.bounds)
+        /// Uncomment if recording via quicktime
+        //window.alwaysShowTouches = true
+        window.strokeColor = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
+        window.fillColor = #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1)
+        return window
+    }()
+
     lazy var coreDataController = CoreDataController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
